@@ -1,0 +1,8 @@
+*TASK_KBASE="scenarios.xml"
+BROWSER=c:\Program Files (x86)\Internet Explorer\iexplore.exe
+PATH_TO_HELP="help\"
+PATH_TO_RGDB="rgdb"
+PATH_TO_SOM="."
+PATH_TO_RSTATISTICS="c:\Program Files (x86)\R"
+*LANGUAGE=german
+LANGUAGE=english

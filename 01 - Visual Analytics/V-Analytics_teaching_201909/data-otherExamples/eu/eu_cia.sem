@@ -1,0 +1,16 @@
+QuantitativeAttributes=Population,Female,Male,F <14,F 15-64,F >65,M <14,M 15-64,M >65,% <14,% 15-64,% >65,other land use,Birth rate,Death rate
+BenefitCriteriaAttributes=NDP per person,Birth rate,Life expectancy,Fertility,Migration,Female,Male,% <14,% 15-64,% >65
+CostCriteriaAttributes=forests,Infant mortality,Death rate,Inflation
+ComparableGroup=Population,Female,Male,F <14,F 15-64,F >65,M <14,M 15-64,M >65,other land use
+ComparableGroup=% <14,% >65,% 15-64
+ComparableGroup=Birth rate,Death rate
+ComparableGroup=Life expectancy,Life expectancy - Male,Life expectancy - Female
+ComparableGroup=meadows,forests
+InclusionGroup=Population,Female,Male
+InclusionGroup=Female,F <14,F 15-64,F >65
+InclusionGroup=Population,Male,F <14,F 15-64,F >65
+InclusionGroup=Male,M <14,M 15-64,M >65
+InclusionGroup=Population,Female,M <14,M 15-64,M >65
+InclusionGroup=Population,M <14,M 15-64,M >65,F <14,F 15-64,F >65
+InclusionGroup=NULL,% <14,% 15-64,% >65
+InclusionGroup=NULL,Birth rate,Death rate

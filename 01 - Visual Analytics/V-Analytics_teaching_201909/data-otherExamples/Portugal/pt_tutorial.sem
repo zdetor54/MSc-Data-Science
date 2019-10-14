@@ -1,0 +1,11 @@
+QuantitativeAttributes=total employed in agriculture 1991,total employed in industry 1991,total employed in services 1991,N pop. no primary school education 1991,N pop. with primary school education 1991,N pop. with preparatory school education 1991,N. pop. with high school education 1991,% 0-14 years,% 15-24 years,% 25-64 years,% 65 or more years
+BenefitCriteriaAttributes=% pop. change from 1981 to 1991,% 0-14 years,% pop. no primary school education 1991,% pop. with high school education 1991,% employed in agriculture 1991,% female among unemployed 1991,% employed in industry 1991,% employed in services 1991,% 15-24 years,% 25-64 years,% 65 or more years,% employed in agriculture 1981,% employed in industry 1981,% employed in services 1981
+ComparableGroup=total employed in agriculture 1991,total employed in industry 1991,total employed in services 1991
+ComparableGroup=% employed in agriculture 1991,% pop. no primary school education 1991,% 65 or more years,% employed in agriculture 1981,% employed in industry 1991,% employed in industry 1981,% employed in services 1991,% pop. with primary school education 1991,% pop. with preparatory school education 1991,% pop. with high school education 1991,% employed in services 1981,% pop. with high school education 1981,% 0-14 years,% 15-24 years,% 25-64 years
+ComparableGroup=% female 1981,% female 1991
+ComparableGroup=Pop. density 1981,Pop. density 1991
+ComparableGroup=% female among employed 1991,% female among unemployed 1991
+ComparableGroup=N pop. no primary school education 1991,N pop. with primary school education 1991,N pop. with preparatory school education 1991,N. pop. with high school education 1991
+InclusionGroup=NULL,N pop. no primary school education 1991,N pop. with primary school education 1991,N pop. with preparatory school education 1991,N. pop. with high school education 1991
+InclusionGroup=NULL,total employed in agriculture 1991,total employed in industry 1991,total employed in services 1991
+InclusionGroup=NULL,% 0-14 years,% 15-24 years,% 25-64 years,% 65 or more years

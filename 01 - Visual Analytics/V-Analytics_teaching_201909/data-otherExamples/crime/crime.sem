@@ -1,0 +1,8 @@
+<preference type=icons>
+ATTRIBUTES="pop_rat_to_"
+_GeomSign_:UP_TRIANGLE;1;null;(5,96,0);(0,0,0);(0,0,0)="increase 25-50%"
+_GeomSign_:UP_TRIANGLE;1;null;(34,176,1);(0,0,0);(0,0,0)="increase >100%"
+_GeomSign_:UP_TRIANGLE;1;null;(20,255,2);(0,0,0);(0,0,0)="increase 50-100%"
+_GeomSign_:UP_TRIANGLE;1;null;(255,240,1);(0,0,0);(0,0,0)="increase <25%"
+_GeomSign_:DOWN_TRIANGLE;1;null;(255,0,0);(0,0,0);(0,0,0)="decrease"
+</preference>

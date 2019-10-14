@@ -1,0 +1,52 @@
+id,Name,cmp to median,Time of Maximum
+01,Alabama,Always better,1991
+02,Alaska,Always worse,1979-82
+04,Arizona,Always worse,1975
+05,Arkansas,Always better,1991
+06,California,Worse; then better,1979-82
+08,Colorado,Always worse,1979-82
+09,Connecticut,Worse; then better,1979-82
+10,Delaware,Always worse,1979-82
+11,District of Columbia,Always worse,1994-97
+12,Florida,Always worse,1987-89
+13,Georgia,Better; then worse,1987-89
+15,Hawaii,Always worse,1979-82
+16,Idaho,Balance around,1979-82
+17,Illinois,Always worse,1979-82
+18,Indiana,Better; then worse,1975
+19,Iowa,Always better,1979-82
+20,Kansas,Balance around,1979-82
+21,Kentucky,Always better,1979-82
+22,Louisiana,Better; then worse,1994-97
+23,Maine,Always better,1979-82
+24,Maryland,Always worse,1979-82
+25,Massachusetts,Worse; then better,1975
+26,Michigan,Always worse,1979-82
+27,Minnesota,Balance around,1979-82
+28,Mississippi,Always better,1994-97
+29,Missouri,Balance around,1975
+30,Montana,Balance around,1994-97
+31,Nebraska,Always better,1994-97
+32,Nevada,Always worse,1979-82
+33,New Hampshire,Always better,1979-82
+34,New Jersey,Worse; then better,1979-82
+35,New Mexico,Always worse,1994-97
+36,New York,Worse; then better,1979-82
+37,North Carolina,Better; then worse,1991
+38,North Dakota,Always better,1979-82
+39,Ohio,Better; then worse,1979-82
+40,Oklahoma,Better; then worse,1987-89
+41,Oregon,Always worse,1979-82
+42,Pennsylvania,Always better,1979-82
+44,Rhode Island,Worse; then better,1979-82
+45,South Carolina,Better; then worse,1994-97
+46,South Dakota,Always better,1979-82
+47,Tennessee,Better; then worse,1994-97
+48,Texas,Always worse,1987-89
+49,Utah,Always worse,1994-97
+50,Vermont,Always better,1979-82
+51,Virginia,Always better,1979-82
+53,Washington,Always worse,1987-89
+54,West Virginia,Always better,1991
+55,Wisconsin,Always better,1979-82
+56,Wyoming,Balance around,1979-82
