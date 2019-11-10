@@ -4,4 +4,20 @@
 	this one collapses multiple rows with the same value in 'ColumnName' and gets the sum
 * df = df.assign(new_column = (df["a"] + df["b"]) ) 
 	This one creates new columns based on the old column values
-
+* scale data:
+	from sklearn.preprocessing import StandardScaler
+	scaler = StandardScaler()
+	scaler.fit(features_np)
+	scaled_data = scaler.transform(features_np)
+* Kmeans clustering:
+	from sklearn.cluster import KMeans
+	kmeans = KMeans(n_clusters=3)
+	kmeans.fit(scaled_data)
+	predicted_results = kmeans.labels_
+* PCA
+	from sklean.decomposition import PCA
+	pca = PCA(n_components=2)
+	pca.fit(scaled_data)
+	projected_axes = pca.transform(scaled_data)
+*visualise all point against the first two principal components:
+	plt.scatter(projected_axes[:,columnIDToVisX], projected_axes[:,columnIDToVisY], c = predicted_results, cmap = "plasma", alpha= 0.3)
