@@ -1,0 +1,1435 @@
+<!DOCTYPE html>
+
+<html  dir="ltr" lang="en" xml:lang="en">
+<head>
+    <title>MDL_IN3061-INM430_PRD1_A_2019-20: Lab 07</title>
+    <link rel="shortcut icon" href="https://moodle.city.ac.uk/theme/image.php/cul_boost/theme/1570514709/favicon" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UA8DU1NRGwcAXVNaAQM=",licenseKey:"e4ad0f6bec",applicationID:"4092862"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(u){try{i("ierr",[u,c.now(),!0])}catch(d){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),u=t("gos"),f=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(5),t(4),"addEventListener"in window&&t(3),c.xhrWrappable&&t(6),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(u(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(f);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[f,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),u=XMLHttpRequest,f="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(u.prototype)):u.prototype.hasOwnProperty(f)&&(o(window),o(u.prototype)),a.on(f+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],4:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],5:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",u="clearTimeout",f="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[u,"clearImmediate"],u+d),i.on(c+f,r),i.on(s+f,o)},{}],6:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=f.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,f.emit("xhr-resolved",[],t)),d.inPlace(t,x,"fn-",s)}function i(t){g.push(t),h&&(b?b.then(a):v?v(a):(E=-E,R.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(3);var u=t("ee"),f=u.get("xhr"),d=t(18)(f),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,v=l.SI,w="readystatechange",x=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=f;var y=window.XMLHttpRequest=function(t){var n=new p(t);try{f.emit("new-xhr",[n],n),n.addEventListener(w,o,!1)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}return n};if(c(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",s),f.on("send-xhr-start",function(t,n){r(t,n),i(n)}),f.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!v&&!m){var E=1,R=document.createTextNode(E);new h(a).observe(R,{characterData:!0})}}else u.on("fn-end",function(t){t[0]&&t[0].type===w||a()})},{}],7:[function(t,n,e){function r(){var t=window.NREUM,n=t.info.accountID||null,e=t.info.agentID||null,r=t.info.trustKey||null,i="btoa"in window&&"function"==typeof window.btoa;if(!n||!e||!i)return null;var a={v:[0,1],d:{ty:"Browser",ac:n,ap:e,id:o.generateCatId(),tr:o.generateCatId(),ti:Date.now()}};return r&&n!==r&&(a.d.tk=r),btoa(JSON.stringify(a))}var o=t(13);n.exports={generateTraceHeader:r}},{}],8:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<p;r++)t.removeEventListener(l[r],this.listener,!1);n.aborted||(e.duration=s.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):a(this,t),e.cbTime=this.cbTime,d.emit("xhr-done",[t],t),c("xhr",[n,e,this.startTime]))}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return v(r)}function i(t,n){var e=u(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}function a(t,n){t.params.status=n.status;var e=o(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var s=t("loader");if(s.xhrWrappable){var c=t("handle"),u=t(9),f=t(7).generateTraceHeader,d=t("ee"),l=["load","error","abort","timeout"],p=l.length,h=t("id"),m=t(12),v=t(11),w=window.XMLHttpRequest;s.features.xhr=!0,t(6),d.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){a(n,t)},!1),m&&(m>34||m<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),d.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),d.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=!1;if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(e=!!NREUM.init.distributed_tracing.enabled),e&&this.sameOrigin){var r=f();r&&n.setRequestHeader("newrelic",r)}}),d.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=v(r);i&&(e.txSize=i)}this.startTime=s.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{d.emit("internal-error",[e])}catch(r){}}};for(var a=0;a<p;a++)n.addEventListener(l[a],this.listener,!1)}),d.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),d.on("xhr-load-added",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),d.on("xhr-load-removed",function(t,n){var e=""+h(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),d.on("addEventListener-end",function(t,n){n instanceof w&&"load"===t[0]&&d.emit("xhr-load-added",[t[1],t[2]],n)}),d.on("removeEventListener-end",function(t,n){n instanceof w&&"load"===t[0]&&d.emit("xhr-load-removed",[t[1],t[2]],n)}),d.on("fn-start",function(t,n,e){n instanceof w&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=s.now()))}),d.on("fn-end",function(t,n){this.xhrCbStart&&d.emit("xhr-cb-time",[s.now()-this.xhrCbStart,this.onload,n],n)})}},{}],9:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],10:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[u.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),u=t("loader"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){f[n]=o(l+n,!0,"api")}),f.addPageAction=o(l+"addPageAction",!0),f.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,f.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[u.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[u.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[u.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,u.now(),!1,n])}},{}],11:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],12:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],13:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],14:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(u){l([u,"",[r,a,o],s])}f(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw f(n+"err",[r,a,d],s),d}finally{f(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function u(t,n,o,i){o||(o="");var a,s,c,u="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,u?s+o:o,i,s))}function f(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=u,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,u=0;u<c;u++)s[u].apply(a,r);var d=f[g[e]];return d&&d.push([y,e,r,a]),a}}function p(t,n){x[t]=m(t).concat(n)}function h(t,n){var e=x[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return x[t]||[]}function v(t){return d[t]=d[t]||o(e)}function w(t,n){u(t,function(t,e){n=n||"feature",g[e]=n,n in f||(f[n]=[])})}var x={},g={},y={on:p,addEventListener:p,removeEventListener:h,emit:e,get:v,listeners:m,context:n,buffer:w,abort:a,aborted:!1};return y}function i(){return new r}function a(){(f.api||f.feature)&&(l.aborted=!0,f=l.backlog={})}var s="nr@context",c=t("gos"),u=t(15),f={},d={},l=n.exports=o();l.backlog=f},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return f.abort();u(g,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return R.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),u=t(15),f=t("ee"),d=t(14),l=window,p=l.document,h="addEventListener",m="attachEvent",v=l.XMLHttpRequest,w=v&&v.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:v,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var x=""+location,g={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1130.min.js"},y=v&&w&&w[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:x,features:{},xhrWrappable:y,userAgent:d};t(10),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,R=t(17)},{}]},{},["loader",2,8]);</script>
+<meta name="keywords" content="moodle, MDL_IN3061-INM430_PRD1_A_2019-20: Lab 07" />
+<link rel="stylesheet" type="text/css" href="https://moodle.city.ac.uk/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.css" /><script id="firstthemesheet" type="text/css">/** Required in order to fix style inclusion problems in IE with YUI **/</script><link rel="stylesheet" type="text/css" href="https://moodle.city.ac.uk/theme/styles.php/cul_boost/1570514709_1570517518/all" />
+<script type="text/javascript">
+//<![CDATA[
+var M = {}; M.yui = {};
+M.pageloadstarttime = new Date();
+M.cfg = {"wwwroot":"https:\/\/moodle.city.ac.uk","sesskey":"UxabzkXnIR","themerev":"1570514709","slasharguments":1,"theme":"cul_boost","iconsystemmodule":"core\/icon_system_fontawesome","jsrev":"1570514709","admin":"admin","svgicons":true,"usertimezone":"Europe\/London","contextid":1816162};var yui1ConfigFn = function(me) {if(/-skin|reset|fonts|grids|base/.test(me.name)){me.type='css';me.path=me.path.replace(/\.js/,'.css');me.path=me.path.replace(/\/yui2-skin/,'/assets/skins/sam/yui2-skin')}};
+var yui2ConfigFn = function(me) {var parts=me.name.replace(/^moodle-/,'').split('-'),component=parts.shift(),module=parts[0],min='-min';if(/-(skin|core)$/.test(me.name)){parts.pop();me.type='css';min=''}
+if(module){var filename=parts.join('-');me.path=component+'/'+module+'/'+filename+min+'.'+me.type}else{me.path=component+'/'+component+'.'+me.type}};
+YUI_config = {"debug":false,"base":"https:\/\/moodle.city.ac.uk\/lib\/yuilib\/3.17.2\/","comboBase":"https:\/\/moodle.city.ac.uk\/theme\/yui_combo.php?","combine":true,"filter":null,"insertBefore":"firstthemesheet","groups":{"yui2":{"base":"https:\/\/moodle.city.ac.uk\/lib\/yuilib\/2in3\/2.9.0\/build\/","comboBase":"https:\/\/moodle.city.ac.uk\/theme\/yui_combo.php?","combine":true,"ext":false,"root":"2in3\/2.9.0\/build\/","patterns":{"yui2-":{"group":"yui2","configFn":yui1ConfigFn}}},"moodle":{"name":"moodle","base":"https:\/\/moodle.city.ac.uk\/theme\/yui_combo.php?m\/1570514709\/","combine":true,"comboBase":"https:\/\/moodle.city.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"m\/1570514709\/","patterns":{"moodle-":{"group":"moodle","configFn":yui2ConfigFn}},"filter":null,"modules":{"moodle-core-actionmenu":{"requires":["base","event","node-event-simulate"]},"moodle-core-blocks":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification"]},"moodle-core-checknet":{"requires":["base-base","moodle-core-notification-alert","io-base"]},"moodle-core-chooserdialogue":{"requires":["base","panel","moodle-core-notification"]},"moodle-core-dock":{"requires":["base","node","event-custom","event-mouseenter","event-resize","escape","moodle-core-dock-loader","moodle-core-event"]},"moodle-core-dock-loader":{"requires":["escape"]},"moodle-core-dragdrop":{"requires":["base","node","io","dom","dd","event-key","event-focus","moodle-core-notification"]},"moodle-core-event":{"requires":["event-custom"]},"moodle-core-formchangechecker":{"requires":["base","event-focus","moodle-core-event"]},"moodle-core-handlebars":{"condition":{"trigger":"handlebars","when":"after"}},"moodle-core-languninstallconfirm":{"requires":["base","node","moodle-core-notification-confirm","moodle-core-notification-alert"]},"moodle-core-lockscroll":{"requires":["plugin","base-build"]},"moodle-core-maintenancemodetimer":{"requires":["base","node"]},"moodle-core-notification":{"requires":["moodle-core-notification-dialogue","moodle-core-notification-alert","moodle-core-notification-confirm","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-core-notification-dialogue":{"requires":["base","node","panel","escape","event-key","dd-plugin","moodle-core-widget-focusafterclose","moodle-core-lockscroll"]},"moodle-core-notification-alert":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-confirm":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-exception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-notification-ajaxexception":{"requires":["moodle-core-notification-dialogue"]},"moodle-core-popuphelp":{"requires":["moodle-core-tooltip"]},"moodle-core-tooltip":{"requires":["base","node","io-base","moodle-core-notification-dialogue","json-parse","widget-position","widget-position-align","event-outside","cache-base"]},"moodle-core_availability-form":{"requires":["base","node","event","event-delegate","panel","moodle-core-notification-dialogue","json"]},"moodle-backup-backupselectall":{"requires":["node","event","node-event-simulate","anim"]},"moodle-backup-confirmcancel":{"requires":["node","node-event-simulate","moodle-core-notification-confirm"]},"moodle-course-categoryexpander":{"requires":["node","event-key"]},"moodle-course-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-course-formatchooser":{"requires":["base","node","node-event-simulate"]},"moodle-course-management":{"requires":["base","node","io-base","moodle-core-notification-exception","json-parse","dd-constrain","dd-proxy","dd-drop","dd-delegate","node-event-delegate"]},"moodle-course-modchooser":{"requires":["moodle-core-chooserdialogue","moodle-course-coursebase"]},"moodle-course-util":{"requires":["node"],"use":["moodle-course-util-base"],"submodules":{"moodle-course-util-base":{},"moodle-course-util-section":{"requires":["node","moodle-course-util-base"]},"moodle-course-util-cm":{"requires":["node","moodle-course-util-base"]}}},"moodle-form-dateselector":{"requires":["base","node","overlay","calendar"]},"moodle-form-passwordunmask":{"requires":[]},"moodle-form-shortforms":{"requires":["node","base","selector-css3","moodle-core-event"]},"moodle-form-showadvanced":{"requires":["node","base","selector-css3"]},"moodle-question-chooser":{"requires":["moodle-core-chooserdialogue"]},"moodle-question-preview":{"requires":["base","dom","event-delegate","event-key","core_question_engine"]},"moodle-question-qbankmanager":{"requires":["node","selector-css3"]},"moodle-question-searchform":{"requires":["base","node"]},"moodle-availability_completion-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_date-form":{"requires":["base","node","event","io","moodle-core_availability-form"]},"moodle-availability_grade-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_group-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_grouping-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-availability_profile-form":{"requires":["base","node","event","moodle-core_availability-form"]},"moodle-mod_aspirelists-inline_display":{"requires":["base","node","event","event-delegate"]},"moodle-mod_assign-history":{"requires":["node","transition"]},"moodle-mod_attendance-groupfilter":{"requires":["base","node"]},"moodle-mod_checklist-linkselect":{"requires":["node","event-valuechange"]},"moodle-mod_forum-subscriptiontoggle":{"requires":["base-base","io-base"]},"moodle-mod_hsuforum-article":{"requires":["base","node","event","router","core_rating","querystring","moodle-mod_hsuforum-io","moodle-mod_hsuforum-livelog","moodle-core-formchangechecker"]},"moodle-mod_hsuforum-io":{"requires":["base","io-base","io-form","io-upload-iframe","json-parse"]},"moodle-mod_hsuforum-livelog":{"requires":["widget"]},"moodle-mod_quiz-autosave":{"requires":["base","node","event","event-valuechange","node-event-delegate","io-form"]},"moodle-mod_quiz-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-base","moodle-mod_quiz-util-page","moodle-mod_quiz-util-slot","moodle-course-util"]},"moodle-mod_quiz-modform":{"requires":["base","node","event"]},"moodle-mod_quiz-questionchooser":{"requires":["moodle-core-chooserdialogue","moodle-mod_quiz-util","querystring-parse"]},"moodle-mod_quiz-quizbase":{"requires":["base","node"]},"moodle-mod_quiz-repaginate":{"requires":["base","event","node","io","moodle-core-notification-dialogue"]},"moodle-mod_quiz-toolboxes":{"requires":["base","node","event","event-key","io","moodle-mod_quiz-quizbase","moodle-mod_quiz-util-slot","moodle-core-notification-ajaxexception"]},"moodle-mod_quiz-util":{"requires":["node","moodle-core-actionmenu"],"use":["moodle-mod_quiz-util-base"],"submodules":{"moodle-mod_quiz-util-base":{},"moodle-mod_quiz-util-slot":{"requires":["node","moodle-mod_quiz-util-base"]},"moodle-mod_quiz-util-page":{"requires":["node","moodle-mod_quiz-util-base"]}}},"moodle-mod_scheduler-delselected":{"requires":["base","node","event"]},"moodle-mod_scheduler-saveseen":{"requires":["base","node","event"]},"moodle-mod_scheduler-studentlist":{"requires":["base","node","event","io"]},"moodle-message_airnotifier-toolboxes":{"requires":["base","node","io"]},"moodle-block_culactivity_stream-scroll":{"requires":["base","node","io","json-parse","dom-core","querystring","event-custom","moodle-core-dock"]},"moodle-block_culupcoming_events-scroll":{"requires":["base","node","io","json-parse","dom-core","querystring","event-custom","moodle-core-dock","node-event-simulate"]},"moodle-filter_glossary-autolinker":{"requires":["base","node","io-base","json-parse","event-delegate","overlay","moodle-core-event","moodle-core-notification-alert","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-filter_mathjaxloader-loader":{"requires":["moodle-core-event"]},"moodle-editor_atto-editor":{"requires":["node","transition","io","overlay","escape","event","event-simulate","event-custom","node-event-html5","node-event-simulate","yui-throttle","moodle-core-notification-dialogue","moodle-core-notification-confirm","moodle-editor_atto-rangy","handlebars","timers","querystring-stringify"]},"moodle-editor_atto-plugin":{"requires":["node","base","escape","event","event-outside","handlebars","event-custom","timers","moodle-editor_atto-menu"]},"moodle-editor_atto-menu":{"requires":["moodle-core-notification-dialogue","node","event","event-custom"]},"moodle-editor_atto-rangy":{"requires":[]},"moodle-format_culcourse-dragdrop":{"requires":["base","node","io","dom","dd","dd-scroll","moodle-core-dragdrop","moodle-core-notification","moodle-course-coursebase","moodle-course-util"]},"moodle-format_grid-gridkeys":{"requires":["event-nav-keys"]},"moodle-report_eventlist-eventfilter":{"requires":["base","event","node","node-event-delegate","datatable","autocomplete","autocomplete-filters"]},"moodle-report_loglive-fetchlogs":{"requires":["base","event","node","io","node-event-delegate"]},"moodle-gradereport_grader-gradereporttable":{"requires":["base","node","event","handlebars","overlay","event-hover"]},"moodle-gradereport_history-userselector":{"requires":["escape","event-delegate","event-key","handlebars","io-base","json-parse","moodle-core-notification-dialogue"]},"moodle-tool_capability-search":{"requires":["base","node"]},"moodle-tool_lp-dragdrop-reorder":{"requires":["moodle-core-dragdrop"]},"moodle-tool_monitor-dropdown":{"requires":["base","event","node"]},"moodle-assignfeedback_editpdf-editor":{"requires":["base","event","node","io","graphics","json","event-move","event-resize","transition","querystring-stringify-simple","moodle-core-notification-dialog","moodle-core-notification-alert","moodle-core-notification-warning","moodle-core-notification-exception","moodle-core-notification-ajaxexception"]},"moodle-atto_accessibilitychecker-button":{"requires":["color-base","moodle-editor_atto-plugin"]},"moodle-atto_accessibilityhelper-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_align-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_bold-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_charmap-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_clear-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_collapse-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_echo360attoplugin-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_emoticon-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_equation-button":{"requires":["moodle-editor_atto-plugin","moodle-core-event","io","event-valuechange","tabview","array-extras"]},"moodle-atto_fullscreen-button":{"requires":["event-resize","moodle-editor_atto-plugin"]},"moodle-atto_html-button":{"requires":["promise","moodle-editor_atto-plugin","moodle-atto_html-beautify","moodle-atto_html-codemirror","event-valuechange"]},"moodle-atto_html-beautify":{},"moodle-atto_html-codemirror":{"requires":["moodle-atto_html-codemirror-skin"]},"moodle-atto_htmlplus-beautify":{},"moodle-atto_htmlplus-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_htmlplus-beautify","moodle-atto_htmlplus-codemirror","event-valuechange"]},"moodle-atto_htmlplus-codemirror":{"requires":["moodle-atto_htmlplus-codemirror-skin"]},"moodle-atto_image-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_indent-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_italic-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_kalturamedia-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_link-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_managefiles-usedfiles":{"requires":["node","escape"]},"moodle-atto_media-button":{"requires":["moodle-editor_atto-plugin","moodle-form-shortforms"]},"moodle-atto_noautolink-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_orderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_recordrtc-button":{"requires":["moodle-editor_atto-plugin","moodle-atto_recordrtc-recording"]},"moodle-atto_recordrtc-recording":{"requires":["moodle-atto_recordrtc-button"]},"moodle-atto_rtl-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_strike-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_styles-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_subscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_superscript-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_table-button":{"requires":["moodle-editor_atto-plugin","moodle-editor_atto-menu","event","event-valuechange"]},"moodle-atto_title-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_underline-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_undo-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_unorderedlist-button":{"requires":["moodle-editor_atto-plugin"]},"moodle-atto_wiris-button":{"requires":["moodle-editor_atto-plugin","get"]},"moodle-local_kaltura-lticontainer":{"requires":["base","node"]},"moodle-local_kaltura-ltipanel":{"requires":["base","node","panel","node-event-simulate"]},"moodle-local_kaltura-ltiservice":{"requires":["base","node","node-event-simulate"]},"moodle-local_kaltura-ltitinymcepanel":{"requires":["base","node","panel","node-event-simulate"]}}},"gallery":{"name":"gallery","base":"https:\/\/moodle.city.ac.uk\/lib\/yuilib\/gallery\/","combine":true,"comboBase":"https:\/\/moodle.city.ac.uk\/theme\/yui_combo.php?","ext":false,"root":"gallery\/1570514709\/","patterns":{"gallery-":{"group":"gallery"}}}},"modules":{"core_filepicker":{"name":"core_filepicker","fullpath":"https:\/\/moodle.city.ac.uk\/lib\/javascript.php\/1570514709\/repository\/filepicker.js","requires":["base","node","node-event-simulate","json","async-queue","io-base","io-upload-iframe","io-form","yui2-treeview","panel","cookie","datatable","datatable-sort","resize-plugin","dd-plugin","escape","moodle-core_filepicker","moodle-core-notification-dialogue"]},"core_comment":{"name":"core_comment","fullpath":"https:\/\/moodle.city.ac.uk\/lib\/javascript.php\/1570514709\/comment\/comment.js","requires":["base","io-base","node","json","yui2-animation","overlay","escape"]},"mathjax":{"name":"mathjax","fullpath":"https:\/\/cdnjs.cloudflare.com\/ajax\/libs\/mathjax\/2.7.2\/MathJax.js?delayStartupUntil=configured"}}};
+M.yui.loader = {modules: {}};
+
+//]]>
+</script>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style>
+
+</style>        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimal-ui">
+</head>
+
+<body  id="page-mod-resource-view" class="format-culcourse  path-mod path-mod-resource chrome dir-ltr lang-en yui-skin-sam yui3-skin-sam moodle-city-ac-uk pagelayout-incourse course-35253 context-1816162 cmid-1447183 category-6 ">
+
+<div>
+    <a class="sr-only sr-only-focusable" href="#maincontent">Skip to main content</a>
+    <a class="sr-only sr-only-focusable" href="#accessibility">Skip to accessibility</a>
+</div><script type="text/javascript" src="https://moodle.city.ac.uk/theme/yui_combo.php?rollup/3.17.2/yui-moodlesimple-min.js"></script><script type="text/javascript" src="https://moodle.city.ac.uk/theme/jquery.php/core/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://moodle.city.ac.uk/theme/jquery.php/core/ui-1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://moodle.city.ac.uk/theme/jquery.php/core/ui-1.12.1/theme/smoothness/jquery-ui.min.css" />
+<script type="text/javascript" src="https://moodle.city.ac.uk/lib/javascript.php/1570514709/lib/javascript-static.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+document.body.className += ' jsenabled';
+//]]>
+</script>
+
+
+<nav id="top" role="header" class="navbar navbar-default d-block"><div class="topmenu d-none d-md-block"><div class="container-fluid"><div id="cross-domain"><ul id="cross-domain-nav" class="d-flex flex-wrap">
+<li><a href="https://www.city.ac.uk/">city.ac.uk</a></li>
+<li><a target="_blank" href="https://outlook.office.com/">Email</a></li>
+<li><a class="active" style="pointer-events: none" href="https://moodle.city.ac.uk/index.php">Moodle</a></li>
+<li><a href="https://www.city.ac.uk/library">Library</a></li>
+<li><a href="https://studenthub.city.ac.uk/">Student Hub</a></li>
+<li><a href="https://staffhub.city.ac.uk/">Staff Hub</a></li>
+</ul></div></div></div><div class="main-navigation"><div class="container-fluid d-lg-flex flex-wrap align-items-center position-relative py-3 py-md-4"><div class="right-float-menu d-none d-lg-flex flex-wrap mx-auto mb-3"><div class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-5dc744c4904ca5dc744c46b0c33" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Tools" href="#">
+        Tools
+    </a>
+    <div class="dropdown-menu" aria-labelledby="drop-down-5dc744c4904ca5dc744c46b0c33">
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/local/culrollover/" title="Rollover Tool">Rollover Tool</a>
+                <a class="dropdown-item" href="https://sleguidance.atlassian.net/wiki/display/Moodle/Rollover+tool" target="_blank" title="Guidance for Rollover">Guidance for Rollover</a>
+    </div>
+</div><div class="dropdown nav-item">
+    <a class="dropdown-toggle nav-link" id="drop-down-5dc744c49061c5dc744c46b0c34" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Help &amp; Support" href="#">
+        Help &amp; Support
+    </a>
+    <div class="dropdown-menu" aria-labelledby="drop-down-5dc744c49061c5dc744c46b0c34">
+                <a class="dropdown-item" href="https://mediaspace.city.ac.uk/media/Welcome+to+Moodle+2019+20/1_2emc1d92" title="Induction Video">Induction Video</a>
+                <a class="dropdown-item" href="https://moodle.city.ac.uk/course/view.php?id=34729" title="Learning with Moodle">Learning with Moodle</a>
+                <a class="dropdown-item" href="http://www.city.ac.uk/edtechhelp/student" target="_blank" title="Student Guidance">Student Guidance</a>
+                <a class="dropdown-item" href="http://www.city.ac.uk/edtechhelp/staff" target="_blank" title="Staff Guidance">Staff Guidance</a>
+                <a class="dropdown-item" href="http://www.city.ac.uk/accessibility" target="_blank" title="Accessibility Help">Accessibility Help</a>
+                <a class="dropdown-item" href="https://cityuni.service-now.com" target="_blank" title="IT Service Desk">IT Service Desk</a>
+                <a class="dropdown-item" href="https://www.city.ac.uk/about/city-information/legal/data-protection" target="_blank" title="Privacy Notice">Privacy Notice</a>
+    </div>
+</div><a class="nav-item nav-link" href="" data-action="tool_usertours/resetpagetour" title="User tour">User tour</a></div><div class="d-flex flex-wrap align-items-center w-100"><div class="navbar-header col py-2 pl-0"><div class="navbar-brand"><a class="homelink" href="https://moodle.city.ac.uk/"><img src="https://moodle.city.ac.uk/theme/image.php/cul_boost/theme/1570514709/city-logo" class="sitelogo citylogo" alt="City, University of London" /></a></div></div><div class="nav-outer-wrap ml-auto"><div class="nav-wrap d-flex flex-wrap align-items-stretch"><a class="homelink" href="https://moodle.city.ac.uk/"><img src="https://moodle.city.ac.uk/theme/image.php/cul_boost/theme/1570514709/city-logo-white" class="sitelogo citylogo" alt="City, University of London" /></a><div class="nav-inner d-none d-lg-flex flex-wrap align-items-stretch ml-lg-auto"><ul class="nav d-flex flex-wrap align-items-stretch justify-content-center" role="menubar"><li id="theme-cul_boost-mymoodle" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-3"><a href="https://moodle.city.ac.uk/my/">My Moodle</a></ul><ul class="nav d-flex flex-wrap align-items-stretch justify-content-center" role="menubar"><li id="theme-cul_boost-mymodules" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-3"><a href="" class="dropdown-toggle" data-toggle="dropdown">My Modules</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-2019-20" class="dropdown-item dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">2019-20</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-prd1_2019-20" class="dropdown-item dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Term 1</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-in3061/inm430principlesofdatascience(prd1a2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253">IN3061/INM430 Principles of Data Science (PRD1 A 2019/20)</a><li id="theme-cul_boost-inm430principlesofdatascience(prd1a2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=33387">INM430 Principles of Data Science (PRD1 A 2019/20)</a><li id="theme-cul_boost-inm433visualanalytics(prd1a2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=33388">INM433 Visual Analytics (PRD1 A 2019/20)</a></ul><li id="theme-cul_boost-learningwithmoodle(2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=34729">Learning with Moodle (2019/20)</a><li id="theme-cul_boost-mscindatascience(2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=34739">MSc in Data Science (2019/20)</a><li id="theme-cul_boost-postgraduateresourcecentre(2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=34842">Postgraduate Resource Centre (2019/20)</a></ul></ul></ul><ul class="nav d-flex flex-wrap align-items-stretch justify-content-center" role="menubar"><li id="theme-cul_boost-modulemenu" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-3"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Module Menu</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-grades" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/grade/report/culuser/index.php?id=35253&amp;sesskey=UxabzkXnIR">Grades</a><li id="theme-cul_boost-participants" class="dropdown-item dropdown-submenu"><a href="https://moodle.city.ac.uk/user/index.php?id=35253" class="dropdown-toggle" data-toggle="dropdown">Participants</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-zachariasdetorakis" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/user/view.php?id=170445&amp;course=35253">Zacharias Detorakis</a><li id="theme-cul_boost-participants" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/user/index.php?id=35253">Participants</a></ul><li id="theme-cul_boost-badges" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/badges/view.php?type=2&amp;id=35253">Badges</a><li id="theme-cul_boost-introduction" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-0">Introduction</a><li id="theme-cul_boost-assessment" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-1">Assessment</a><li id="theme-cul_boost-week01-introduction&amp;amp;basicconcepts" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-3">Week 01 - Introduction &amp; Basic Concepts</a><li id="theme-cul_boost-week02-datacharacteristics&amp;amp;wrangling" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-4">Week 02 - Data Characteristics &amp; Wrangling</a><li id="theme-cul_boost-week03-dataprocessing&amp;amp;summarization" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-5">Week 03 - Data Processing &amp; Summarization</a><li id="theme-cul_boost-week04-investigaterelations" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-6">Week 04 - Investigate relations</a><li id="theme-cul_boost-week05-readingweek-nolectures" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-7">Week 05 - Reading Week - No lectures</a><li id="theme-cul_boost-week06-livinginahigh-dimensionalworld" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-8">Week 06 - Living in a High-dimensional World</a><li id="theme-cul_boost-week07-findingintrinsicstructureindata" class="dropdown-item dropdown-submenu"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-9" class="dropdown-toggle" data-toggle="dropdown">Week 07 - Finding intrinsic structure in data</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-file" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447079">Lecture 07 (pdf)</a><li id="theme-cul_boost-file" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447073">Lecture 07 (ipynb)</a><li id="theme-cul_boost-file" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447183">Lab 07</a><li id="theme-cul_boost-file" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447185">Lab 07 - Feedback (ipynb)</a><li id="theme-cul_boost-file" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447184">Lab 07 - Feedback</a><li id="theme-cul_boost-week07-findingintrinsicstructureindata" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-9">Week 07 - Finding intrinsic structure in data</a></ul><li id="theme-cul_boost-week08-predictingwithsupervisedlearning" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-10">Week 08 - Predicting with supervised learning</a><li id="theme-cul_boost-week09-networksandknowledgerepresentation" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-11">Week 09 - Networks and Knowledge Representation</a><li id="theme-cul_boost-week10-visualisationfordatascience&amp;amp;openissues" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-12">Week 10 -  Visualisation For Data Science &amp; Open Issues</a><li id="theme-cul_boost-week11-wrap-upandq&amp;amp;a" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-13">Week 11- Wrap-Up and Q&amp;A</a><li id="theme-cul_boost-mediagallery" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/local/kalturamediagallery/index.php?courseid=35253">Media Gallery</a></ul></ul><ul class="nav d-flex flex-wrap align-items-stretch justify-content-center" role="menubar"></ul></div><div class="nav-extras d-flex flex-wrap align-items-stretch ml-auto ml-lg-0"><div class="global_search d-none d-sm-flex flex-wrap justify-content-end p-0 ml-4"><div class="slidersearchform d-flex flex-wrap align-items-center"><form action="https://moodle.city.ac.uk/search/index.php" method="get"><label for="id_q_5dc744c4911e8" class="accesshide">Enter your search query</label><input id="id_q_5dc744c4911e8" class="w-100" type="text" name="q" alt="Search for..." placeholder="Search for..." /><button type="submit" class="btn btn-primary p-0"><i class="fa fa-search"></i><span class="accesshide">Search</span></button></form></div></div><div class="usermenu d-flex flex-wrap align-items-center dropdown ml-4"><a data-toggle="dropdown" class="usermenu_header d-flex flex-wrap align-items-center dropdown-toggle text-default" href="javascript://void(0)"><span class="avatar current bg-light"><img src="https://moodle.city.ac.uk/pluginfile.php/1702949/user/icon/cul_boost/f2?rev=13796250" alt="Picture of Zacharias Detorakis" class="userpicture" width="36" height="36" role="presentation" /></span></a><div id="usermenu_content" class="usermenu_content m-0 pt-0 dropdown-menu dropdown-menu-right"><div class="py-2 px-3 h5 m-0 bg-medium username">Zacharias Detorakis</div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/my/"><span class="icon m-a-0"><i class="icon fa fa-tachometer fa-fw iconsmall"  title="My Moodle" aria-label="My Moodle"></i></span><span class="title">My Moodle</span></a></div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/user/profile.php?id=170445"><span class="icon m-a-0"><i class="icon fa fa-user fa-fw iconsmall"  title="Profile" aria-label="Profile"></i></span><span class="title">Profile</span></a></div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/grade/report/overview/index.php"><span class="icon m-a-0"><i class="icon fa fa-table fa-fw iconsmall"  title="Grades" aria-label="Grades"></i></span><span class="title">Grades</span></a></div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/message/index.php"><span class="icon m-a-0"><i class="icon fa fa-comment fa-fw iconsmall"  title="Messages" aria-label="Messages"></i></span><span class="title">Messages</span></a></div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/local/mymedia/mymedia.php"><span class="icon m-a-0"><i class="icon fa fa-arrow-circle-down fa-fw iconsmall"  title="My Media" aria-label="My Media"></i></span><span class="title">My Media</span></a></div><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/user/preferences.php"><span class="icon m-a-0"><i class="icon fa fa-wrench fa-fw iconsmall"  title="Preferences" aria-label="Preferences"></i></span><span class="title">Preferences</span></a></div><hr /><div class="menu-item"><a class="menu-link d-block dropdown-item px-3" href="https://moodle.city.ac.uk/login/logout.php?sesskey=UxabzkXnIR"><span class="icon m-a-0"><i class="icon fa fa-sign-out fa-fw iconsmall"  title="Log out" aria-label="Log out"></i></span><span class="title">Log out</span></a></div></div></div><div class="navbar-toggle d-lg-none ml-3"><span class="icon-bar"></span></div></div></div></div></div></div></div></nav><div class="drawer-wrap bg-white"><div class="drawer d-flex flex-wrap justify-content-center pt-3"><div class="drawer-content d-flex flex-wrap flex-column justify-content-stretch w-100"><div class="navbar-toggle ml-auto mr-3"><span class="icon-bar"></span></div><div class="mainmenu-wrap d-flex flex-column col"><ul class="nav d-flex flex-wrap align-items-stretch justify-content-center" role="menubar"><li id="theme-cul_boost-mymoodle" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-3"><a href="https://moodle.city.ac.uk/my/">My Moodle</a></ul><ul class="nav d-flex flex-wrap align-items-stretch justify-content-center" role="menubar"><li id="theme-cul_boost-mymodules" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-3"><a href="" class="dropdown-toggle" data-toggle="dropdown">My Modules</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-2019-20" class="dropdown-item dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">2019-20</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-prd1_2019-20" class="dropdown-item dropdown-submenu"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Term 1</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-in3061/inm430principlesofdatascience(prd1a2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253">IN3061/INM430 Principles of Data Science (PRD1 A 2019/20)</a><li id="theme-cul_boost-inm430principlesofdatascience(prd1a2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=33387">INM430 Principles of Data Science (PRD1 A 2019/20)</a><li id="theme-cul_boost-inm433visualanalytics(prd1a2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=33388">INM433 Visual Analytics (PRD1 A 2019/20)</a></ul><li id="theme-cul_boost-learningwithmoodle(2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=34729">Learning with Moodle (2019/20)</a><li id="theme-cul_boost-mscindatascience(2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=34739">MSc in Data Science (2019/20)</a><li id="theme-cul_boost-postgraduateresourcecentre(2019/20)" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=34842">Postgraduate Resource Centre (2019/20)</a></ul></ul></ul><ul class="nav d-flex flex-wrap align-items-stretch justify-content-center" role="menubar"><li id="theme-cul_boost-modulemenu" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-3"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Module Menu</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-grades" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/grade/report/culuser/index.php?id=35253&amp;sesskey=UxabzkXnIR">Grades</a><li id="theme-cul_boost-participants" class="dropdown-item dropdown-submenu"><a href="https://moodle.city.ac.uk/user/index.php?id=35253" class="dropdown-toggle" data-toggle="dropdown">Participants</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-zachariasdetorakis" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/user/view.php?id=170445&amp;course=35253">Zacharias Detorakis</a><li id="theme-cul_boost-participants" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/user/index.php?id=35253">Participants</a><li id="theme-cul_boost-participants" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/user/index.php?id=35253">Participants</a></ul><li id="theme-cul_boost-badges" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/badges/view.php?type=2&amp;id=35253">Badges</a><li id="theme-cul_boost-introduction" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-0">Introduction</a><li id="theme-cul_boost-assessment" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-1">Assessment</a><li id="theme-cul_boost-week01-introduction&amp;amp;basicconcepts" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-3">Week 01 - Introduction &amp; Basic Concepts</a><li id="theme-cul_boost-week02-datacharacteristics&amp;amp;wrangling" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-4">Week 02 - Data Characteristics &amp; Wrangling</a><li id="theme-cul_boost-week03-dataprocessing&amp;amp;summarization" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-5">Week 03 - Data Processing &amp; Summarization</a><li id="theme-cul_boost-week04-investigaterelations" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-6">Week 04 - Investigate relations</a><li id="theme-cul_boost-week05-readingweek-nolectures" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-7">Week 05 - Reading Week - No lectures</a><li id="theme-cul_boost-week06-livinginahigh-dimensionalworld" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-8">Week 06 - Living in a High-dimensional World</a><li id="theme-cul_boost-week07-findingintrinsicstructureindata" class="dropdown-item dropdown-submenu"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-9" class="dropdown-toggle" data-toggle="dropdown">Week 07 - Finding intrinsic structure in data</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-file" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447079">Lecture 07 (pdf)</a><li id="theme-cul_boost-file" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447073">Lecture 07 (ipynb)</a><li id="theme-cul_boost-file" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447183">Lab 07</a><li id="theme-cul_boost-file" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447185">Lab 07 - Feedback (ipynb)</a><li id="theme-cul_boost-file" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447184">Lab 07 - Feedback</a><li id="theme-cul_boost-week07-findingintrinsicstructureindata" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-9">Week 07 - Finding intrinsic structure in data</a><li id="theme-cul_boost-week07-findingintrinsicstructureindata" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-9">Week 07 - Finding intrinsic structure in data</a></ul><li id="theme-cul_boost-week08-predictingwithsupervisedlearning" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-10">Week 08 - Predicting with supervised learning</a><li id="theme-cul_boost-week09-networksandknowledgerepresentation" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-11">Week 09 - Networks and Knowledge Representation</a><li id="theme-cul_boost-week10-visualisationfordatascience&amp;amp;openissues" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-12">Week 10 -  Visualisation For Data Science &amp; Open Issues</a><li id="theme-cul_boost-week11-wrap-upandq&amp;amp;a" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/course/view.php?id=35253#section-13">Week 11- Wrap-Up and Q&amp;A</a><li id="theme-cul_boost-mediagallery" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a href="https://moodle.city.ac.uk/local/kalturamediagallery/index.php?courseid=35253">Media Gallery</a></ul></ul><ul class="nav d-flex flex-wrap align-items-stretch justify-content-center" role="menubar"></ul><div class="help-menu-wrap bg-light mt-auto py-2 bg-light"><ul class="nav d-flex flex-wrap align-items-stretch justify-content-center" role="menubar"><li id="theme-cul_boost-tools" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-2"><a href="#cm_submenu_1" class="dropdown-toggle" data-toggle="dropdown" title="Tools">Tools</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-rollovertool" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a title="Rollover Tool" href="https://moodle.city.ac.uk/local/culrollover/">Rollover Tool</a><li id="theme-cul_boost-guidanceforrollover" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a title="Guidance for Rollover" href="https://sleguidance.atlassian.net/wiki/display/Moodle/Rollover+tool" target="_blank">Guidance for Rollover</a></ul><li id="theme-cul_boost-help&amp;support" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-2"><a href="#cm_submenu_2" class="dropdown-toggle" data-toggle="dropdown" title="Help &amp; Support">Help & Support</a><ul class="dropdown-menu mt-0"><li id="theme-cul_boost-inductionvideo" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a title="Induction Video" href="https://mediaspace.city.ac.uk/media/Welcome+to+Moodle+2019+20/1_2emc1d92">Induction Video</a><li id="theme-cul_boost-learningwithmoodle" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a title="Learning with Moodle" href="https://moodle.city.ac.uk/course/view.php?id=34729">Learning with Moodle</a><li id="theme-cul_boost-studentguidance" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a title="Student Guidance" href="http://www.city.ac.uk/edtechhelp/student" target="_blank">Student Guidance</a><li id="theme-cul_boost-staffguidance" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a title="Staff Guidance" href="http://www.city.ac.uk/edtechhelp/staff" target="_blank">Staff Guidance</a><li id="theme-cul_boost-accessibilityhelp" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a title="Accessibility Help" href="http://www.city.ac.uk/accessibility" target="_blank">Accessibility Help</a><li id="theme-cul_boost-itservicedesk" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a title="IT Service Desk" href="https://cityuni.service-now.com" target="_blank">IT Service Desk</a><li id="theme-cul_boost-privacynotice" class="dropdown-item d-flex flex-wrap align-items-center justify-content-center"><a title="Privacy Notice" href="https://www.city.ac.uk/about/city-information/legal/data-protection" target="_blank">Privacy Notice</a></ul><li id="theme-cul_boost-usertour" class="dropdown d-flex flex-wrap align-items-center justify-content-center py-2"><a title="User tour" href="">User tour</a></ul></div></div></div></div></div>
+<div id="page" class="position-relative">
+
+    
+    <div class="page-header container-fluid text-center text-md-left"><h1 class="pageheading font-weight-normal mb-0">IN3061/INM430 Principles of Data Science (PRD1 A 2019/20)</h1></div><div id="page-navbar" class="container-fluid"><div class="d-flex flex-wrap align-items-center mb-4"><nav class="breadcrumb-nav d-flex flex-wrap align-items-center justify-content-center justify-content-md-start col-12 col-md p-0" role="navigation" aria-label="breadcrumb"><span class="accesshide">Page path</span><ol class="breadcrumb d-flex flex-wrap align-items-center justify-content-center justify-content-md-start bg-transparent px-0 py-2 mb-0"><li class="breadcrumb-item d-inline-flex flex-wrap align-items-center"><a class="d-flex align-items-center" href="https://moodle.city.ac.uk/"><i class="fa fa-home"></i><span class="accesshide"><b class="showoncollapse">Home</b></span></a> </li><li class="breadcrumb-item d-inline-flex flex-wrap align-items-center"><span tabindex="0">My Moodle</span> </li><li class="breadcrumb-item d-inline-flex flex-wrap align-items-center"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="IN3061/INM430 Principles of Data Science (PRD1 A 2019/20)" href="https://moodle.city.ac.uk/course/view.php?id=35253"><span itemprop="title">MDL_IN3061-INM430_PRD1_A_2019-20</span></a></span> </li><li class="breadcrumb-item d-inline-flex flex-wrap align-items-center"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" href="https://moodle.city.ac.uk/course/view.php?id=35253#section-9"><span itemprop="title">Week 07 - Finding intrinsic structure in data</span></a></span> </li><li class="breadcrumb-item d-inline-flex flex-wrap align-items-center"><span itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb"><a itemprop="url" title="File" aria-current="page" href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447183"><span itemprop="title">Lab 07</span></a></span></li></ul></nav><div class="overlay"><div class="close-icon"></div></div></div></div>
+    <div class="container-fluid">
+
+        <div id="page-content" class="row justify-content-center">
+            <section id="region-main" class="col-12 pb-2 mb-4 border-0">
+                <span class="notifications" id="user-notifications"></span><div role="main"><span id="maincontent"></span><h2>Lab 07</h2><div class="resourcecontent resourcegeneral">
+  <iframe id="resourceobject" src="https://moodle.city.ac.uk/pluginfile.php/1816162/mod_resource/content/1/Lab_07%281%29.html?embed=1">
+    Click <a href="https://moodle.city.ac.uk/pluginfile.php/1816162/mod_resource/content/1/Lab_07%281%29.html" >Lab_07(1).html</a> link to view the file.
+  </iframe>
+</div><div id="resourceintro" class="box mod_introbox py-3"><p class="resourcedetails">272.2KB</p></div></div><div class="m-t-2 m-b-1 activity-navigation">
+<div class="row">
+    <div class="col-md-4">        <div class="pull-left">
+                <a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447073&forceview=1" id="prev-activity-link" class="btn btn-link"  title="Lecture 07 (ipynb)" >&#x25C4; Lecture 07 (ipynb)</a>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="mdl-align">
+            <div class="urlselect">
+    <form method="post" action="https://moodle.city.ac.uk/course/jumpto.php" class="form-inline" id="url_select_f5dc744c46b0c35">
+        <input type="hidden" name="sesskey" value="UxabzkXnIR">
+            <label for="jump-to-activity" class="sr-only">
+                Jump to...
+            </label>
+        <select  id="jump-to-activity" class="custom-select urlselect" name="jump"
+                 >
+                    <option value="" selected>Jump to...</option>
+                    <option value="/mod/forum/view.php?id=1314499&amp;forceview=1" >Announcements</option>
+                    <option value="/mod/forum/view.php?id=1314500&amp;forceview=1" >Discussion Forum</option>
+                    <option value="/mod/resource/view.php?id=1314502&amp;forceview=1" >Module Specification-INM430 Principles of Data Science </option>
+                    <option value="/mod/choicegroup/view.php?id=1423738&amp;forceview=1" >See which lab group you're in</option>
+                    <option value="/mod/lti/view.php?id=1427587&amp;forceview=1" >Lecture Capture</option>
+                    <option value="/mod/page/view.php?id=1314508&amp;forceview=1" >Coursework description: A Tiny Data Science Project</option>
+                    <option value="/mod/assign/view.php?id=1440040&amp;forceview=1" >Submission: Plan &amp; progress update</option>
+                    <option value="/mod/page/view.php?id=1314519&amp;forceview=1" >Week01 - Overview</option>
+                    <option value="/mod/resource/view.php?id=1314520&amp;forceview=1" >Lecture 01</option>
+                    <option value="/mod/resource/view.php?id=1425058&amp;forceview=1" >Lecture 01 (6 per page)</option>
+                    <option value="/mod/page/view.php?id=1314521&amp;forceview=1" >Lab 01</option>
+                    <option value="/mod/page/view.php?id=1314523&amp;forceview=1" >Lab Feedback 01</option>
+                    <option value="/mod/page/view.php?id=1314522&amp;forceview=1" >Running Spyder on Lab Machines</option>
+                    <option value="/mod/page/view.php?id=1314524&amp;forceview=1" >Week02 - Overview</option>
+                    <option value="/mod/resource/view.php?id=1429042&amp;forceview=1" >Lecture 02</option>
+                    <option value="/mod/resource/view.php?id=1429043&amp;forceview=1" >Lecture 02 (6 per page)</option>
+                    <option value="/mod/page/view.php?id=1314526&amp;forceview=1" >Lab 02</option>
+                    <option value="/mod/page/view.php?id=1314527&amp;forceview=1" >Introduction to Jupyter Notebooks</option>
+                    <option value="/mod/page/view.php?id=1314528&amp;forceview=1" >Lab Feedback 02</option>
+                    <option value="/mod/resource/view.php?id=1432559&amp;forceview=1" >Lab Feedback 02 (ipynb)</option>
+                    <option value="/mod/page/view.php?id=1314529&amp;forceview=1" >Week03 - Overview</option>
+                    <option value="/mod/resource/view.php?id=1432890&amp;forceview=1" >Lecture 03</option>
+                    <option value="/mod/resource/view.php?id=1432895&amp;forceview=1" >Lecture 03 (6 per page)</option>
+                    <option value="/mod/resource/view.php?id=1314534&amp;forceview=1" >Jupyter notebook used in the lecture</option>
+                    <option value="/mod/page/view.php?id=1314532&amp;forceview=1" >Lab 03</option>
+                    <option value="/mod/page/view.php?id=1434472&amp;forceview=1" >Lab Feedback 03</option>
+                    <option value="/mod/resource/view.php?id=1434477&amp;forceview=1" >Lab Feedback 03 (ipynb)</option>
+                    <option value="/mod/page/view.php?id=1314535&amp;forceview=1" >Week04 - Overview</option>
+                    <option value="/mod/resource/view.php?id=1436847&amp;forceview=1" >Lecture 04</option>
+                    <option value="/mod/resource/view.php?id=1436848&amp;forceview=1" >Lecture 04 (6 per page)</option>
+                    <option value="/mod/page/view.php?id=1314537&amp;forceview=1" >Lab 04</option>
+                    <option value="/mod/page/view.php?id=1439273&amp;forceview=1" >Lab feedback 04</option>
+                    <option value="/mod/resource/view.php?id=1439274&amp;forceview=1" >Lab Feedback 04 (ipynb)</option>
+                    <option value="/mod/page/view.php?id=1314539&amp;forceview=1" >Lab 05 (additional practical exercise, in your own time)</option>
+                    <option value="/mod/page/view.php?id=1444727&amp;forceview=1" >Lab feedback 05</option>
+                    <option value="/mod/resource/view.php?id=1445338&amp;forceview=1" >Lab 05 feedback (ipynb)</option>
+                    <option value="/mod/page/view.php?id=1314541&amp;forceview=1" >Week06 - Overview</option>
+                    <option value="/mod/resource/view.php?id=1442110&amp;forceview=1" >Lecture 06</option>
+                    <option value="/mod/page/view.php?id=1314544&amp;forceview=1" >Lab 06</option>
+                    <option value="/mod/resource/view.php?id=1446656&amp;forceview=1" >Lab 06 - Feedback (ipynb)</option>
+                    <option value="/mod/resource/view.php?id=1446655&amp;forceview=1" >Lab 06 - Feedback</option>
+                    <option value="/mod/resource/view.php?id=1447079&amp;forceview=1" >Lecture 07 (pdf)</option>
+                    <option value="/mod/resource/view.php?id=1447073&amp;forceview=1" >Lecture 07 (ipynb)</option>
+                    <option value="/mod/resource/view.php?id=1447185&amp;forceview=1" >Lab 07 - Feedback (ipynb)</option>
+                    <option value="/mod/resource/view.php?id=1447184&amp;forceview=1" >Lab 07 - Feedback</option>
+                    <option value="/mod/page/view.php?id=1314550&amp;forceview=1" >Week09 - Overview</option>
+                    <option value="/mod/page/view.php?id=1314560&amp;forceview=1" >Week10 - Overview</option>
+        </select>
+            <noscript>
+                <input type="submit" class="btn btn-secondary" value="Go">
+            </noscript>
+    </form>
+</div>
+
+        </div>
+</div>
+    <div class="col-md-4">        <div class="pull-right">
+                <a href="https://moodle.city.ac.uk/mod/resource/view.php?id=1447185&forceview=1" id="next-activity-link" class="btn btn-link"  title="Lab 07 - Feedback (ipynb)" >Lab 07 - Feedback (ipynb) &#x25BA;</a>
+
+        </div>
+</div>
+</div>
+</div>            </section>
+
+            <aside id="block-region-side-post" class="empty block-region" data-blockregion="side-post" data-droptarget="1"></aside>        </div>
+    </div>
+</div>
+
+<div
+    id="message-drawer-5dc744c493eb65dc744c46b0c36"
+    class="message-drawer bg-light hidden"
+    aria-expanded="false"
+    aria-hidden="true"
+    data-region="message-drawer"
+    role="region"
+>
+    <div class="header-container position-relative" data-region="header-container">
+        <div class="hidden border-bottom px-2 py-3" aria-hidden="true" data-region="view-contacts">
+            <div class="d-flex align-items-center">
+                <div class="align-self-stretch">
+                    <a class="h-100 d-flex align-items-center mr-2" href="#" data-route-back>
+                        <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                        <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>
+                        <span class="accesshide">Back</span>                    </a>
+                </div>
+                <div>
+                    Contacts
+                </div>
+                <div class="ml-auto">
+                    <a href="#" data-route="view-search">
+                        <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                        <span class="accesshide">Search</span>
+                    </a>
+                </div>
+            </div>
+        </div>        
+        <div
+            class="hidden bg-white position-relative border-bottom px-2 py-2"
+            aria-hidden="true"
+            data-region="view-conversation"
+        >
+            <div class="hidden" data-region="header-content"></div>
+            <div class="hidden" data-region="header-edit-mode">
+                
+                <div class="d-flex p-2 align-items-center">
+                    Messages selected:
+                    <span class="ml-1" data-region="message-selected-court">1</span>
+                    <button type="button" class="ml-auto close" aria-label="Cancel message selection"
+                        data-action="cancel-edit-mode">
+                            <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            </div>
+            <div data-region="header-placeholder">
+                <div class="d-flex">
+                    <div class="align-self-stretch" >
+                        <a class="h-100 mr-2 d-flex align-items-center" href="#" data-route-back role="button">
+                            <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                            <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>
+                            <span class="accesshide">Back</span>                        </a>
+                    </div>
+                    <div
+                        class="ml-2 rounded-circle bg-pulse-grey align-self-center"
+                        style="height: 38px; width: 38px"
+                    >
+                    </div>
+                    <div class="ml-2 " style="flex: 1">
+                        <div
+                            class="mt-1 bg-pulse-grey w-75"
+                            style="height: 16px;"
+                        >
+                        </div>
+                    </div>
+                    <div
+                        class="ml-2 bg-pulse-grey align-self-center"
+                        style="height: 16px; width: 20px"
+                    >
+                    </div>
+                </div>
+            </div>
+            <div
+                class="hidden position-absolute"
+                data-region="confirm-dialogue-container"
+                style="top: 0; bottom: -1px; right: 0; left: 0; background: rgba(0,0,0,0.3);"
+            ></div>
+        </div>        <div class="border-bottom px-2 py-3" aria-hidden="false" data-region="view-overview">
+            <div class="d-flex align-items-center">
+                <div class="input-group">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text pr-0 bg-white">
+                            <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                        </span>
+                    </div>
+                    <input
+                        type="text"
+                        class="form-control border-left-0"
+                        placeholder="Search"
+                        aria-label="Search"
+                        data-region="view-overview-search-input"
+                    >
+                </div>
+                <div class="ml-2">
+                    <a
+                        href="#"
+                        data-route="view-settings"
+                        data-route-param="170445"
+                    >
+                        <i class="icon fa fa-cog fa-fw " aria-hidden="true"  ></i>
+                        <span class="accesshide">Settings</span>
+                    </a>
+                </div>
+            </div>
+            <div class="text-right mt-3">
+                <a href="#" data-route="view-contacts">
+                    <i class="icon fa fa-user fa-fw " aria-hidden="true"  ></i>
+                    Contacts
+                    <span class="badge bg-primary ml-2 hidden" data-region="contact-request-count">
+                        0
+                    </span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="hidden border-bottom px-2 py-3 view-search" aria-hidden="true" data-region="view-search">
+            <div class="d-flex align-items-center">
+                <a
+                    class="mr-2 align-self-stretch d-flex align-items-center"
+                    href="#"
+                    data-route-back
+                    data-action="cancel-search"
+                >
+                    <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                    <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>
+                    <span class="accesshide">Back</span>                </a>
+                <div class="input-group">
+                    <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Search"
+                        aria-label="Search"
+                        data-region="search-input"
+                    >
+                    <div class="input-group-append">
+                        <button
+                            class="btn btn-outline-secondary"
+                            type="button"
+                            data-action="search"
+                        >
+                            <span data-region="search-icon-container">
+                                <i class="icon fa fa-search fa-fw " aria-hidden="true"  ></i>
+                            </span>
+                            <span class=accesshide">Search</span>
+                            <span class="hidden" data-region="loading-icon-container">
+                                <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>        
+        <div class="hidden border-bottom px-2 py-3" aria-hidden="true" data-region="view-settings">
+            <div class="d-flex align-items-center">
+                <div class="align-self-stretch" >
+                    <a class="h-100 d-flex mr-2 align-items-center" href="#" data-route-back role="button">
+                        <span class="dir-rtl-hide"><i class="icon fa fa-chevron-left fa-fw " aria-hidden="true"  ></i></span>
+                        <span class="dir-ltr-hide"><i class="icon fa fa-chevron-right fa-fw " aria-hidden="true"  ></i></span>
+                        <span class="accesshide">Back</span>                    </a>
+                </div>
+                <div>
+                    Settings
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="body-container position-relative" data-region="body-container">
+        
+        <div
+            class="hidden"
+            data-region="view-contact"
+            aria-hidden="true"
+        >
+            <div class="p-2 pt-3" data-region="content-container"></div>
+        </div>        <div class="hidden h-100" data-region="view-contacts" aria-hidden="true" data-user-id="170445">
+            <div class="d-flex flex-column h-100">
+                <div class="p-3 border-bottom">
+                    <ul class="nav nav-pills nav-fill" role="tablist">
+                        <li class="nav-item">
+                            <a
+                                id="contacts-tab-5dc744c493eb65dc744c46b0c36"
+                                class="nav-link active"
+                                href="#contacts-tab-panel-5dc744c493eb65dc744c46b0c36"
+                                data-toggle="tab"
+                                data-action="show-contacts-section"
+                                role="tab"
+                                aria-controls="contacts-tab-panel-5dc744c493eb65dc744c46b0c36"
+                                aria-selected="true"
+                            >
+                                Contacts
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a
+                                id="requests-tab-5dc744c493eb65dc744c46b0c36"
+                                class="nav-link"
+                                href="#requests-tab-panel-5dc744c493eb65dc744c46b0c36"
+                                data-toggle="tab"
+                                data-action="show-requests-section"
+                                role="tab"
+                                aria-controls="requests-tab-panel-5dc744c493eb65dc744c46b0c36"
+                                aria-selected="false"
+                            >
+                                Requests
+                                <span class="badge bg-primary ml-2 hidden"
+                                data-region="contact-request-count"
+                                aria-label="There are 0 pending contact requests">
+                                    0
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-content d-flex flex-column h-100">
+                            <div
+            class="tab-pane fade show active h-100 lazy-load-list"
+            aria-live="polite"
+            data-region="lazy-load-list"
+            data-user-id="170445"
+                                id="contacts-tab-panel-5dc744c493eb65dc744c46b0c36"
+                    data-section="contacts"
+                    role="tabpanel"
+                    aria-labelledby="contacts-tab-5dc744c493eb65dc744c46b0c36"
+
+        >
+        
+            
+            <div class="hidden text-center p-2" data-region="empty-message-container">
+                No contacts
+            </div>
+            <div class="hidden list-group" data-region="content-container">
+                
+            </div>
+            <div class="list-group" data-region="placeholder-container">
+                
+            </div>
+            <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+            </div>
+        </div>
+        
+                            <div
+            class="tab-pane fade h-100 lazy-load-list"
+            aria-live="polite"
+            data-region="lazy-load-list"
+            data-user-id="170445"
+                                id="requests-tab-panel-5dc744c493eb65dc744c46b0c36"
+                    data-section="requests"
+                    role="tabpanel"
+                    aria-labelledby="requests-tab-5dc744c493eb65dc744c46b0c36"
+
+        >
+        
+            
+            <div class="hidden text-center p-2" data-region="empty-message-container">
+                No contact requests
+            </div>
+            <div class="hidden list-group" data-region="content-container">
+                
+            </div>
+            <div class="list-group" data-region="placeholder-container">
+                
+            </div>
+            <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+            </div>
+        </div>
+                </div>
+            </div>
+        </div>        
+        <div
+            class="view-conversation hidden h-100"
+            aria-hidden="true"
+            data-region="view-conversation"
+            data-user-id="170445"
+            data-midnight="1573257600"
+            data-message-poll-min="10"
+            data-message-poll-max="120"
+            data-message-poll-after-max="300"
+            style="overflow-y: auto; overflow-x: hidden"
+        >
+            <div class="position-relative h-100" data-region="content-container" style="overflow-y: auto; overflow-x: hidden">
+                <div class="content-message-container hidden h-100 px-2 pt-0" data-region="content-message-container" role="log" style="overflow-y: auto; overflow-x: hidden">
+                    <div class="py-3 bg-light sticky-top z-index-1 border-bottom text-center hidden" data-region="contact-request-sent-message-container">
+                        <p class="m-0">Contact request sent</p>
+                        <p class="font-italic font-weight-light" data-region="text"></p>
+                    </div>
+                    <div class="hidden text-center p-3" data-region="more-messages-loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+                </div>
+                <div class="p-4 w-100 h-100 hidden position-absolute" data-region="confirm-dialogue-container" style="top: 0; background: rgba(0,0,0,0.3);">
+                    
+                    <div class="p-3 bg-white" data-region="confirm-dialogue" role="alert">
+                        <h3 class="h6 hidden" data-region="dialogue-header"></h3>
+                        <p class="text-muted" data-region="dialogue-text"></p>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-block">
+                            <span data-region="dialogue-button-text">Block</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-unblock">
+                            <span data-region="dialogue-button-text">Unblock</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-remove-contact">
+                            <span data-region="dialogue-button-text">Remove</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-add-contact">
+                            <span data-region="dialogue-button-text">Add</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-selected-messages">
+                            <span data-region="dialogue-button-text">Delete</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="confirm-delete-conversation">
+                            <span data-region="dialogue-button-text">Delete</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="request-add-contact">
+                            <span data-region="dialogue-button-text">Send contact request</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-primary btn-block hidden" data-action="accept-contact-request">
+                            <span data-region="dialogue-button-text">Accept and add to contacts</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-block hidden" data-action="decline-contact-request">
+                            <span data-region="dialogue-button-text">Decline</span>
+                            <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        </button>
+                        <button type="button" class="btn btn-secondary btn-block" data-action="cancel-confirm">Cancel</button>
+                    </div>
+                </div>
+                <div class="px-2 pb-2 pt-0" data-region="content-placeholder">
+                    <div class="h-100 d-flex flex-column">
+                        <div
+                            class="px-2 pb-2 pt-0 bg-light h-100"
+                            style="overflow-y: auto"
+                        >
+                            <div class="mt-4">
+                                <div class="mb-4">
+                                    <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                            </div>                            <div class="mt-4">
+                                <div class="mb-4">
+                                    <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                            </div>                            <div class="mt-4">
+                                <div class="mb-4">
+                                    <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                            </div>                            <div class="mt-4">
+                                <div class="mb-4">
+                                    <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                            </div>                            <div class="mt-4">
+                                <div class="mb-4">
+                                    <div class="mx-auto bg-white" style="height: 25px; width: 100px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                                <div class="d-flex flex-column p-2 bg-white rounded mb-2">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <div class="mr-2">
+                                            <div class="rounded-circle bg-pulse-grey" style="height: 35px; width: 35px"></div>
+                                        </div>
+                                        <div class="mr-4 w-75 bg-pulse-grey" style="height: 16px"></div>
+                                        <div class="ml-auto bg-pulse-grey" style="width: 35px; height: 16px"></div>
+                                    </div>
+                                    <div class="bg-pulse-grey w-100" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-100 mt-2" style="height: 16px"></div>
+                                    <div class="bg-pulse-grey w-75 mt-2" style="height: 16px"></div>
+                                </div>
+                            </div>                        </div>
+                    </div>                </div>
+            </div>
+        </div>
+        
+        <div
+            class="hidden"
+            aria-hidden="true"
+            data-region="view-group-info"
+        >
+            <div
+                class="pt-3 h-100 d-flex flex-column"
+                data-region="group-info-content-container"
+                style="overflow-y: auto"
+            ></div>
+        </div>        <div class="h-100 view-overview-body" aria-hidden="false" data-region="view-overview" data-user-id="170445">
+            <div id="message-drawer-view-overview-container" class="d-flex flex-column h-100" style="overflow-y: auto">
+                    
+                    
+                    <div
+                        class="section border-0 card"
+                        data-region="view-overview-favourites"
+                    >
+                        <div id="view-overview-favourites-toggle" class="card-header p-0" data-region="toggle">
+                            <button
+                                class="btn btn-link w-100 text-left p-2 d-flex align-items-center overview-section-toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#view-overview-favourites-target"
+                                aria-expanded="false"
+                                aria-controls="view-overview-favourites-target"
+                            >
+                                <span class="collapsed-icon-container">
+                                    <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <span class="expanded-icon-container">
+                                    <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <span class="font-weight-bold">Starred</span>
+                                <small class="hidden ml-1" data-region="section-total-count-container"
+                                aria-label=" total conversations">
+                                    (<span data-region="section-total-count"></span>)
+                                </small>
+                                <span class="hidden ml-2" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                </span>
+                                <span class="hidden badge badge-pill badge-primary ml-auto bg-primary"
+                                data-region="section-unread-count"
+                                >
+                                    
+                                </span>
+                            </button>
+                        </div>
+                                            <div
+                        class="collapse border-bottom  lazy-load-list"
+                        aria-live="polite"
+                        data-region="lazy-load-list"
+                        data-user-id="170445"
+                                    id="view-overview-favourites-target"
+            aria-labelledby="view-overview-favourites-toggle"
+            data-parent="#message-drawer-view-overview-container"
+
+                    >
+                    
+                        
+                        <div class="hidden text-center p-2" data-region="empty-message-container">
+                                    <p class="text-muted mt-2">No starred conversations</p>
+
+                        </div>
+                        <div class="hidden list-group" data-region="content-container">
+                            
+                        </div>
+                        <div class="list-group" data-region="placeholder-container">
+                                    <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+
+                        </div>
+                        <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    
+                    <div
+                        class="section border-0 card"
+                        data-region="view-overview-group-messages"
+                    >
+                        <div id="view-overview-group-messages-toggle" class="card-header p-0" data-region="toggle">
+                            <button
+                                class="btn btn-link w-100 text-left p-2 d-flex align-items-center overview-section-toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#view-overview-group-messages-target"
+                                aria-expanded="false"
+                                aria-controls="view-overview-group-messages-target"
+                            >
+                                <span class="collapsed-icon-container">
+                                    <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <span class="expanded-icon-container">
+                                    <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <span class="font-weight-bold">Group</span>
+                                <small class="hidden ml-1" data-region="section-total-count-container"
+                                aria-label=" total conversations">
+                                    (<span data-region="section-total-count"></span>)
+                                </small>
+                                <span class="hidden ml-2" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                </span>
+                                <span class="hidden badge badge-pill badge-primary ml-auto bg-primary"
+                                data-region="section-unread-count"
+                                >
+                                    
+                                </span>
+                            </button>
+                        </div>
+                                            <div
+                        class="collapse border-bottom  lazy-load-list"
+                        aria-live="polite"
+                        data-region="lazy-load-list"
+                        data-user-id="170445"
+                                    id="view-overview-group-messages-target"
+            aria-labelledby="view-overview-group-messages-toggle"
+            data-parent="#message-drawer-view-overview-container"
+
+                    >
+                    
+                        
+                        <div class="hidden text-center p-2" data-region="empty-message-container">
+                                    <p class="text-muted mt-2">No group conversations</p>
+
+                        </div>
+                        <div class="hidden list-group" data-region="content-container">
+                            
+                        </div>
+                        <div class="list-group" data-region="placeholder-container">
+                                    <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+
+                        </div>
+                        <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                        </div>
+                    </div>
+                    </div>
+                    
+                    
+                    <div
+                        class="section border-0 card"
+                        data-region="view-overview-messages"
+                    >
+                        <div id="view-overview-messages-toggle" class="card-header p-0" data-region="toggle">
+                            <button
+                                class="btn btn-link w-100 text-left p-2 d-flex align-items-center overview-section-toggle collapsed"
+                                data-toggle="collapse"
+                                data-target="#view-overview-messages-target"
+                                aria-expanded="false"
+                                aria-controls="view-overview-messages-target"
+                            >
+                                <span class="collapsed-icon-container">
+                                    <i class="icon fa fa-caret-right fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <span class="expanded-icon-container">
+                                    <i class="icon fa fa-caret-down fa-fw " aria-hidden="true"  ></i>
+                                </span>
+                                <span class="font-weight-bold">Private</span>
+                                <small class="hidden ml-1" data-region="section-total-count-container"
+                                aria-label=" total conversations">
+                                    (<span data-region="section-total-count"></span>)
+                                </small>
+                                <span class="hidden ml-2" data-region="loading-icon-container">
+                                    <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                                </span>
+                                <span class="hidden badge badge-pill badge-primary ml-auto bg-primary"
+                                data-region="section-unread-count"
+                                >
+                                    
+                                </span>
+                            </button>
+                        </div>
+                                            <div
+                        class="collapse border-bottom  lazy-load-list"
+                        aria-live="polite"
+                        data-region="lazy-load-list"
+                        data-user-id="170445"
+                                    id="view-overview-messages-target"
+            aria-labelledby="view-overview-messages-toggle"
+            data-parent="#message-drawer-view-overview-container"
+
+                    >
+                    
+                        
+                        <div class="hidden text-center p-2" data-region="empty-message-container">
+                                    <p class="text-muted mt-2">No private conversations</p>
+
+                        </div>
+                        <div class="hidden list-group" data-region="content-container">
+                            
+                        </div>
+                        <div class="list-group" data-region="placeholder-container">
+                                    <div class="text-center py-2"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+
+                        </div>
+                        <div class="w-100 text-center p-3 hidden" data-region="loading-icon-container" >
+                            <span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+                        </div>
+                    </div>
+                    </div>
+            </div>
+        </div>
+        
+        <div
+            data-region="view-search"
+            aria-hidden="true"
+            class="h-100 hidden"
+            data-user-id="170445"
+            data-users-offset="0"
+            data-messages-offset="0"
+            style="overflow-y: auto"
+        >
+            <div class="hidden" data-region="search-results-container" style="overflow-y: auto">
+                
+                <div class="d-flex flex-column">
+                    <div class="mb-3 bg-white" data-region="all-contacts-container">
+                        <div data-region="contacts-container"  class="pt-2">
+                            <h4 class="h6 px-2">Contacts</h4>
+                            <div class="list-group" data-region="list"></div>
+                        </div>
+                        <div data-region="non-contacts-container" class="pt-2 border-top">
+                            <h4 class="h6 px-2">Non-contacts</h4>
+                            <div class="list-group" data-region="list"></div>
+                        </div>
+                        <div class="text-right">
+                            <button class="btn btn-link text-primary" data-action="load-more-users">
+                                <span data-region="button-text">Load more</span>
+                                <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="bg-white" data-region="messages-container">
+                        <h4 class="h6 px-2 pt-2">Messages</h4>
+                        <div class="list-group" data-region="list"></div>
+                        <div class="text-right">
+                            <button class="btn btn-link text-primary" data-action="load-more-messages">
+                                <span data-region="button-text">Load more</span>
+                                <span data-region="loading-icon-container" class="hidden"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="hidden p-3 text-center" data-region="no-results-container">No results</p>
+                </div>            </div>
+            <div class="hidden" data-region="loading-placeholder">
+                <div class="text-center pt-3 icon-size-4"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</div>
+            </div>
+            <div class="p-3 text-center" data-region="empty-message-container">
+                <p>Search people and messages</p>
+            </div>
+        </div>        
+        <div class="h-100 hidden bg-white" aria-hidden="true" data-region="view-settings">
+            <div class="hidden" data-region="content-container">
+                
+                <div data-region="settings" class="p-3">
+                    <h3 class="h6 font-weight-bold">Privacy</h3>
+                    <p>You can restrict who can message you</p>
+                    <div data-preference="blocknoncontacts" class="mb-3">
+                            <div class="custom-control custom-radio mb-2">
+                                <input
+                                    type="radio"
+                                    name="message_blocknoncontacts"
+                                    class="custom-control-input"
+                                    id="block-noncontacts-5dc744c493eb65dc744c46b0c36-1"
+                                    value="1"
+                                >
+                                <label class="custom-control-label ml-2" for="block-noncontacts-5dc744c493eb65dc744c46b0c36-1">
+                                    My contacts only
+                                </label>
+                            </div>
+                            <div class="custom-control custom-radio mb-2">
+                                <input
+                                    type="radio"
+                                    name="message_blocknoncontacts"
+                                    class="custom-control-input"
+                                    id="block-noncontacts-5dc744c493eb65dc744c46b0c36-0"
+                                    value="0"
+                                >
+                                <label class="custom-control-label ml-2" for="block-noncontacts-5dc744c493eb65dc744c46b0c36-0">
+                                    My contacts and anyone in my courses
+                                </label>
+                            </div>
+                    </div>
+                
+                    <div class="hidden" data-region="notification-preference-container">
+                        <h3 class="mb-2 mt-4 h6 font-weight-bold">Notification preferences</h3>
+                    </div>
+                
+                    <h3 class="mb-2 mt-4 h6 font-weight-bold">General</h3>
+                    <div data-preference="entertosend">
+                        <span class="switch">
+                            <input type="checkbox"
+                                id="enter-to-send-5dc744c493eb65dc744c46b0c36"
+                                
+                            >
+                            <label for="enter-to-send-5dc744c493eb65dc744c46b0c36">
+                                Use enter to send
+                            </label>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div data-region="placeholder-container">
+                
+                <div class="d-flex flex-column p-3">
+                    <div class="w-25 bg-pulse-grey h6" style="height: 18px"></div>
+                    <div class="w-75 bg-pulse-grey mb-4" style="height: 18px"></div>
+                    <div class="mb-3">
+                        <div class="w-100 d-flex mb-3">
+                            <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                            <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                        </div>
+                        <div class="w-100 d-flex mb-3">
+                            <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                            <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                        </div>
+                        <div class="w-100 d-flex mb-3">
+                            <div class="bg-pulse-grey rounded-circle" style="width: 18px; height: 18px"></div>
+                            <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                        </div>
+                    </div>
+                    <div class="w-50 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                    <div class="mb-4">
+                        <div class="w-100 d-flex mb-2 align-items-center">
+                            <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                            <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                        </div>
+                        <div class="w-100 d-flex mb-2 align-items-center">
+                            <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                            <div class="bg-pulse-grey w-25 ml-2" style="height: 18px"></div>
+                        </div>
+                    </div>
+                    <div class="w-25 bg-pulse-grey h6 mb-3 mt-2" style="height: 18px"></div>
+                    <div class="mb-3">
+                        <div class="w-100 d-flex mb-2 align-items-center">
+                            <div class="bg-pulse-grey w-25" style="width: 18px; height: 27px"></div>
+                            <div class="bg-pulse-grey w-50 ml-2" style="height: 18px"></div>
+                        </div>
+                    </div>
+                </div>            </div>
+        </div>    </div>
+    <div class="footer-container position-relative" data-region="footer-container">
+        
+        <div
+            class="hidden border-top bg-white position-relative"
+            aria-hidden="true"
+            data-region="view-conversation"
+            data-enter-to-send="0"
+        >
+            <div class="hidden p-2" data-region="content-messages-footer-container">
+                
+                <div class="d-flex mt-1">
+                    <textarea
+                        dir="auto"
+                        data-region="send-message-txt"
+                        class="form-control bg-light"
+                        rows="3"
+                        data-auto-rows
+                        data-min-rows="3"
+                        data-max-rows="5"
+                        role="textbox"
+                        aria-label="Write a message..."
+                        placeholder="Write a message..."
+                        style="resize: none"
+                    ></textarea>
+                    <button
+                        class="btn btn-link btn-icon icon-size-3 ml-1 mt-auto"
+                        aria-label="Send message"
+                        data-action="send-message"
+                    >
+                        <span data-region="send-icon-container"><i class="icon fa fa-paper-plane fa-fw " aria-hidden="true"  ></i></span>
+                        <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden p-2" data-region="content-messages-footer-edit-mode-container">
+                
+                <div class="d-flex p-3 justify-content-end">
+                    <button
+                        class="btn btn-link btn-icon my-1 icon-size-4"
+                        data-action="delete-selected-messages"
+                        data-toggle="tooltip"
+                        data-placement="top"
+                        title="Delete selected messages"
+                    >
+                        <span data-region="icon-container"><i class="icon fa fa-trash fa-fw " aria-hidden="true"  ></i></span>
+                        <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                        <span class="sr-only">Delete selected messages</span>
+                    </button>
+                </div>            </div>
+            <div class="hidden bg-secondary p-3" data-region="content-messages-footer-require-contact-container">
+                
+                <div class="p-3 bg-white">
+                    <p data-region="title"></p>
+                    <p class="text-muted" data-region="text"></p>
+                    <button type="button" class="btn btn-primary btn-block" data-action="request-add-contact">
+                        <span data-region="dialogue-button-text">Send contact request</span>
+                        <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden bg-secondary p-3" data-region="content-messages-footer-require-unblock-container">
+                
+                <div class="p-3 bg-white">
+                    <p class="text-muted" data-region="text">You have blocked this user.</p>
+                    <button type="button" class="btn btn-primary btn-block" data-action="request-unblock">
+                        <span data-region="dialogue-button-text">Unblock user</span>
+                        <span class="hidden" data-region="loading-icon-container"><span class="loading-icon icon-no-margin"><i class="icon fa fa-circle-o-notch fa-spin fa-fw "  title="Loading" aria-label="Loading"></i></span>
+</span>
+                    </button>
+                </div>
+            </div>
+            <div class="hidden bg-secondary p-3" data-region="content-messages-footer-unable-to-message">
+                
+                <div class="p-3 bg-white">
+                    <p class="text-muted" data-region="text">You are unable to message this user</p>
+                </div>
+            </div>
+            <div class="p-2" data-region="placeholder-container">
+                <div class="d-flex">
+                    <div class="bg-pulse-grey w-100" style="height: 80px"></div>
+                    <div class="mx-2 mb-2 align-self-end bg-pulse-grey" style="height: 20px; width: 20px"></div>
+                </div>            </div>
+            <div
+                class="hidden position-absolute"
+                data-region="confirm-dialogue-container"
+                style="top: -1px; bottom: 0; right: 0; left: 0; background: rgba(0,0,0,0.3);"
+            ></div>
+        </div>    </div>
+</div>
+<footer id="page-footer" class="footer mt-5 w-100 bg-primary text-white">
+    <div class="container-fluid">
+        <div class="footerlinks d-flex flex-wrap text-center text-md-left py-5">
+            <div class="footnote col-12 col-md-6 mb-4 mb-md-0 p-0"><p></p><p></p>
+<p>City, University of London is an independent member institution of 
+the University of London. Established by Royal Charter in 1836, the 
+University of London consists of 18 independent member institutions with
+ outstanding global reputations and several
+  prestigious central academic bodies and activities.</p>
+<p></p>
+<h5>Contact us</h5>+44 (0)20 7040 5060
+<br>Make an enquiry
+<br>
+<p></p><br><p></p></div><img class="footerlogo mx-auto mr-md-0 ml-md-auto" src="https://moodle.city.ac.uk/theme/image.php/cul_boost/theme/1570514709/footerlogo" alt="City, University of London" />        </div>
+    </div>
+
+    <div class="footer-bottom py-3">
+    	<div class="container-fluid d-flex flex-wrap align-items-between">
+	    	<div class="copyright">&copy; 2019 City, University of London</div><a class="scrolltop text-white mx-auto" href="#top">Back to top<i class="fa fa-angle-up ml-2"></i></a><div class="footerlinks"><p></p>
+<p><a href="https://www.city.ac.uk/about/city-information/legal" target="_blank"><span id="docs-internal-guid-27beeefd-a7e6-cd7c-4ba4-90a72ee33b72">Legal</span></a>
+</p>
+<p>
+  <a href="https://cityuni.service-now.com/">Help &amp; Support</a>
+</p>
+<p>
+  <a href="https://blogs.city.ac.uk/accessibility/moodle/" id="accessibility">Accessibility</a>
+</p>
+<br>
+<p></p></div>    	</div>
+    </div>
+</footer>
+
+        <script type="text/javascript">
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-40916233-1']);
+        _gaq.push(['_trackPageview','EEMCSE/EECOMP/MDL_IN3061-INM430_PRD1_A_2019-20/Student/mod-resource-view/id=1447183']);
+
+        (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+        </script>
+
+<script>
+  window.addEventListener("load", function() {
+    require(["jquery", "core/log"], function($, logger) {
+      if ($(document.body).is(".theme-cass.path-course-view")) {
+        logger.info("Preventing Page resource click handler.");
+        $(".modtype_page .instancename").on("click", function(evt) {
+          evt.stopPropagation();
+        });
+      }
+    });
+  });
+</script><script type="text/javascript">
+//<![CDATA[
+var require = {
+    baseUrl : 'https://moodle.city.ac.uk/lib/requirejs.php/1570514709/',
+    // We only support AMD modules with an explicit define() statement.
+    enforceDefine: true,
+    skipDataMain: true,
+    waitSeconds : 0,
+
+    paths: {
+        jquery: 'https://moodle.city.ac.uk/lib/javascript.php/1570514709/lib/jquery/jquery-3.2.1.min',
+        jqueryui: 'https://moodle.city.ac.uk/lib/javascript.php/1570514709/lib/jquery/ui-1.12.1/jquery-ui.min',
+        jqueryprivate: 'https://moodle.city.ac.uk/lib/javascript.php/1570514709/lib/requirejs/jquery-private'
+    },
+
+    // Custom jquery config map.
+    map: {
+      // '*' means all modules will get 'jqueryprivate'
+      // for their 'jquery' dependency.
+      '*': { jquery: 'jqueryprivate' },
+      // Stub module for 'process'. This is a workaround for a bug in MathJax (see MDL-60458).
+      '*': { process: 'core/first' },
+
+      // 'jquery-private' wants the real jQuery module
+      // though. If this line was not here, there would
+      // be an unresolvable cyclic dependency.
+      jqueryprivate: { jquery: 'jquery' }
+    }
+};
+
+//]]>
+</script>
+<script type="text/javascript" src="https://moodle.city.ac.uk/lib/javascript.php/1570514709/lib/requirejs/require.min.js"></script>
+<script type="text/javascript">
+//<![CDATA[
+require(['core/first'], function() {
+;
+require(["media_videojs/loader"], function(loader) {
+    loader.setUp(function(videojs) {
+        videojs.options.flash.swf = "https://moodle.city.ac.uk/media/player/videojs/videojs/video-js.swf";
+videojs.addLanguage("en",{
+ "Audio Player": "Audio Player",
+ "Video Player": "Video Player",
+ "Play": "Play",
+ "Pause": "Pause",
+ "Replay": "Replay",
+ "Current Time": "Current Time",
+ "Duration Time": "Duration Time",
+ "Remaining Time": "Remaining Time",
+ "Stream Type": "Stream Type",
+ "LIVE": "LIVE",
+ "Loaded": "Loaded",
+ "Progress": "Progress",
+ "Progress Bar": "Progress Bar",
+ "progress bar timing: currentTime={1} duration={2}": "{1} of {2}",
+ "Fullscreen": "Fullscreen",
+ "Non-Fullscreen": "Non-Fullscreen",
+ "Mute": "Mute",
+ "Unmute": "Unmute",
+ "Playback Rate": "Playback Rate",
+ "Subtitles": "Subtitles",
+ "subtitles off": "subtitles off",
+ "Captions": "Captions",
+ "captions off": "captions off",
+ "Chapters": "Chapters",
+ "Descriptions": "Descriptions",
+ "descriptions off": "descriptions off",
+ "Audio Track": "Audio Track",
+ "Volume Level": "Volume Level",
+ "You aborted the media playback": "You aborted the media playback",
+ "A network error caused the media download to fail part-way.": "A network error caused the media download to fail part-way.",
+ "The media could not be loaded, either because the server or network failed or because the format is not supported.": "The media could not be loaded, either because the server or network failed or because the format is not supported.",
+ "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.": "The media playback was aborted due to a corruption problem or because the media used features your browser did not support.",
+ "No compatible source was found for this media.": "No compatible source was found for this media.",
+ "The media is encrypted and we do not have the keys to decrypt it.": "The media is encrypted and we do not have the keys to decrypt it.",
+ "Play Video": "Play Video",
+ "Close": "Close",
+ "Close Modal Dialog": "Close Modal Dialog",
+ "Modal Window": "Modal Window",
+ "This is a modal window": "This is a modal window",
+ "This modal can be closed by pressing the Escape key or activating the close button.": "This modal can be closed by pressing the Escape key or activating the close button.",
+ ", opens captions settings dialog": ", opens captions settings dialog",
+ ", opens subtitles settings dialog": ", opens subtitles settings dialog",
+ ", opens descriptions settings dialog": ", opens descriptions settings dialog",
+ ", selected": ", selected",
+ "captions settings": "captions settings",
+ "subtitles settings": "subititles settings",
+ "descriptions settings": "descriptions settings",
+ "Text": "Text",
+ "White": "White",
+ "Black": "Black",
+ "Red": "Red",
+ "Green": "Green",
+ "Blue": "Blue",
+ "Yellow": "Yellow",
+ "Magenta": "Magenta",
+ "Cyan": "Cyan",
+ "Background": "Background",
+ "Window": "Window",
+ "Transparent": "Transparent",
+ "Semi-Transparent": "Semi-Transparent",
+ "Opaque": "Opaque",
+ "Font Size": "Font Size",
+ "Text Edge Style": "Text Edge Style",
+ "None": "None",
+ "Raised": "Raised",
+ "Depressed": "Depressed",
+ "Uniform": "Uniform",
+ "Dropshadow": "Dropshadow",
+ "Font Family": "Font Family",
+ "Proportional Sans-Serif": "Proportional Sans-Serif",
+ "Monospace Sans-Serif": "Monospace Sans-Serif",
+ "Proportional Serif": "Proportional Serif",
+ "Monospace Serif": "Monospace Serif",
+ "Casual": "Casual",
+ "Script": "Script",
+ "Small Caps": "Small Caps",
+ "Reset": "Reset",
+ "restore all settings to the default values": "restore all settings to the default values",
+ "Done": "Done",
+ "Caption Settings Dialog": "Caption Settings Dialog",
+ "Beginning of dialog window. Escape will cancel and close the window.": "Beginning of dialog window. Escape will cancel and close the window.",
+ "End of dialog window.": "End of dialog window."
+});
+
+    });
+});;
+require(["theme_cul_boost/loader"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/slider"], function(amd) { amd.init({"duration":"10"}); });;
+require(["theme_cul_boost/dropdowns"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/drawermenu"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/navsearch"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/courselisting"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/dashpanel"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/settingsmenu"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/navigation"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/stickynav"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/fixedbuttons"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/modalposition"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/showcourse"], function(amd) { amd.init("35253"); });;
+require(["theme_cul_boost/offsetheader"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/favourites"], function(amd) { amd.init(); });;
+require(["theme_cul_boost/favourite"], function(amd) { amd.init(); });;
+require(["block_settings/settingsblock"], function(amd) { amd.init("118330", null); });;
+
+        require(['jquery'], function($) {
+            $('#jump-to-activity').change(function() {
+                if (!$(this).val()) {
+                    return false;
+                }
+                $('#url_select_f5dc744c46b0c35').submit();
+            });
+        });
+    ;
+
+require(['jquery', 'core_message/message_drawer'], function($, MessageDrawer) {
+    var root = $('#message-drawer-5dc744c493eb65dc744c46b0c36');
+    MessageDrawer.init(root);
+});
+;
+require(["core/notification"], function(amd) { amd.init(1816162, []); });;
+require(["core/log"], function(amd) { amd.setConfig({"level":"warn"}); });;
+require(["core/page_global"], function(amd) { amd.init(); });
+});
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+M.str = {"moodle":{"lastmodified":"Last modified","name":"Name","error":"Error","info":"Information","yes":"Yes","no":"No","ok":"OK","cancel":"Cancel","confirm":"Confirm","areyousure":"Are you sure?","closebuttontitle":"Close","unknownerror":"Unknown error"},"repository":{"type":"Type","size":"Size","invalidjson":"Invalid JSON string","nofilesattached":"No files attached","filepicker":"File picker","logout":"Logout","nofilesavailable":"No files available","norepositoriesavailable":"Sorry, none of your current repositories can return files in the required format.","fileexistsdialogheader":"File exists","fileexistsdialog_editor":"A file with that name has already been attached to the text you are editing.","fileexistsdialog_filemanager":"A file with that name has already been attached","renameto":"Rename to \"{$a}\"","referencesexist":"There are {$a} alias\/shortcut files that use this file as their source","select":"Select"},"admin":{"confirmdeletecomments":"You are about to delete comments, are you sure?","confirmation":"Confirmation"}};
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[
+(function() { M.util.js_pending('random5dc744c46b0c31'); Y.on('domready', function() { M.util.init_maximised_embed(Y, "resourceobject");  M.util.js_complete('random5dc744c46b0c31'); });
+Y.use("moodle-filter_glossary-autolinker",function() {M.filter_glossary.init_filter_autolinking({"courseid":0});
+});
+Y.use("moodle-filter_mathjaxloader-loader",function() {M.filter_mathjaxloader.configure({"mathjaxconfig":"\nMathJax.Hub.Config({\n    config: [\"Accessible.js\", \"Safe.js\"],\n    errorSettings: { message: [\"!\"] },\n    skipStartupTypeset: true,\n    messageStyle: \"none\"\n});\n","lang":"en"});
+});
+M.util.help_popups.setup(Y);
+ M.util.js_pending('random5dc744c46b0c37'); Y.on('domready', function() { M.util.js_complete("init");  M.util.js_complete('random5dc744c46b0c37'); });
+})();
+//]]>
+</script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"e4ad0f6bec","applicationID":"4092862","transactionName":"ZwAANhEFCkpQWkVfV15KNxAKSwlWVRZDU0tfEBABBksSUFROH0ZQQA==","queueTime":0,"applicationTime":218,"atts":"S0cDQFkfGUQ=","errorBeacon":"bam.nr-data.net","agent":""}</script></body>
+</html>
