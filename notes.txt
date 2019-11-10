@@ -1,0 +1,7 @@
+* df[['Total_Population']] is equivalent to df.iloc[:,[0]] 
+	and selects the first columns of a dataframe that is titled 'Total Population'. SO if we want to go by index we will use the iloc 	otherwise if we know the name of the column we can use the first one.
+* df.groupby('ColumnName').sum() 
+	this one collapses multiple rows with the same value in 'ColumnName' and gets the sum
+* df = df.assign(new_column = (df["a"] + df["b"]) ) 
+	This one creates new columns based on the old column values
+
