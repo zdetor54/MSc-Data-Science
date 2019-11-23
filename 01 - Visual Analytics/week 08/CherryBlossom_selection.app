@@ -1,0 +1,49 @@
+APPL_NAME "Flickr records of photos of cherry blossoms 2007-2016"
+TERR_NAME "USA"
+FULL_EXTENT (-130.5952,17.127539,-52.746906,53.651505)
+USER_UNIT "degree"
+HAS_GEO_COORD +
+VIDEO_FPS 25
+
+SHOW_LEGEND +
+SHOW_LEGEND_SIZE 30
+SHOW_LEGEND_TERRNAME +
+SHOW_LEGEND_BGCOLOR +
+SHOW_LEGEND_SCALE +
+SHOW_LEGEND_NOBJECTS +
+SHOW_RECORD_PERSISTENT -
+SHOW_RECORD_TOOLTIP +
+SHOW_MANIPULATOR +
+SHOW_MANIPULATOR_SIZE 30
+APPL_BGCOLOR (192,192,192)
+
+LAYER "Cherryblossom_USA_filtered.csv" "Photos of cherry blossoms 2007-2016"
+DELIMITER ","
+FIELD_NAMES_IN_ROW 1
+X_FIELD "longitude"
+Y_FIELD "latitude"
+<TimeReference>
+meaning="OCCURRED_AT"
+"DateTaken"="dd/mm/yyyy hh:tt:ss"
+attr_name="DateTaken"
+keep_original_columns=no
+</TimeReference>
+<TimeReference>
+meaning="OCCURRED_AT"
+"DateTaken: date"="dd/mm/yyyy"
+attr_name="DateTaken: date"
+keep_original_columns=no
+</TimeReference>
+TYPE POINT
+DRAWING +
+ALLOW_SPATIAL_FILTER +
+TRANSPARENCY 90
+LABEL_TRANSPARENCY 40
+SYMBOL_TRANSPARENCY 40
+BORDERS +
+BORDERW 1
+HLIGHTEDW 3
+SELECTEDW 3
+BORDERCOLOR (212,27,123)
+BACKGROUND  (247,192,224)
+HATCH_STYLE 1
