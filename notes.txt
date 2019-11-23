@@ -21,3 +21,15 @@
 	projected_axes = pca.transform(scaled_data)
 *visualise all point against the first two principal components:
 	plt.scatter(projected_axes[:,columnIDToVisX], projected_axes[:,columnIDToVisY], c = predicted_results, cmap = "plasma", alpha= 0.3)
+* elbow method to decide on the number of correct clusters
+	inertias = []
+	for i in range(1, 30):
+    	km = KMeans( n_clusters=i)
+    	km.fit(X)
+    	inertias.append(km.inertia_)
+
+# plot
+plt.plot(range(1, 30), inertias, marker='o')
+plt.xlabel('Number of clusters')
+plt.ylabel('Intertia')
+plt.show()
