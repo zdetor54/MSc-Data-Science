@@ -17,3 +17,9 @@ https://data.london.gov.uk/dataset/employment-self-employed-full-time-and-part-t
 https://data.london.gov.uk/dataset/economic-activity-rate-employment-rate-and-unemployment-rate-ethnic-group-national
 
 create new features for the year on year increase of decrease.
+Moreover, highly
+prevalent crimes overshadow the presence of less frequent ones,
+which might also be of interest, demanding specific tools to
+enable a proper analysis.
+
+https://www.met.police.uk/sd/stats-and-data/met/crime-type-definitions/
