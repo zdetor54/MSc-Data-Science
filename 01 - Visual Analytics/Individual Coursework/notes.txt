@@ -15,3 +15,5 @@ https://data.london.gov.uk/dataset/economic-activity-gender
 https://data.london.gov.uk/dataset/employment-self-employed-full-time-and-part-time-and-gender-borough
 
 https://data.london.gov.uk/dataset/economic-activity-rate-employment-rate-and-unemployment-rate-ethnic-group-national
+
+create new features for the year on year increase of decrease.
