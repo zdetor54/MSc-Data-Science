@@ -22,4 +22,6 @@ prevalent crimes overshadow the presence of less frequent ones,
 which might also be of interest, demanding specific tools to
 enable a proper analysis.
 
+observe overtime increase, decrease, nothing. Selext areas with the highest a lowest variance overtime. Also select boroughs with similar patterns within the areas.
+
 https://www.met.police.uk/sd/stats-and-data/met/crime-type-definitions/
